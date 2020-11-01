@@ -76,8 +76,17 @@ legend {
 #showNewForm {
 
 }
-#alphaIndex {
+.alphaIndex {
 
+}
+#alpha0 {
+
+}
+#alpha1 {
+
+}
+#alpha2 {
+    
 }
 li {
     color: var(--color-gun-metal);
