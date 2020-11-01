@@ -20,7 +20,7 @@ $db = get_db();
             <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
-                    <label for="searchMovieName"> Search Movie By Name</label>
+                    <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <input type="text" id="searchMovieName"></input>
                     <button type="submit" id="searchBtn">Search Movies</button>
                 </fieldset>
@@ -102,13 +102,13 @@ $db = get_db();
             <form class="form-group col-9" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
                     <legend>New Movie</legend>
-                    <label for="titleName0">Movie Title: </label>
+                    <label for="titleName0" class="sr-only">Movie Title: </label>
                     <input type="" id="titleName0">
                     </input>
-                    <label for="titleInfo0">Movie Description: </label>
+                    <label for="titleInfo0" class="sr-only">Movie Description: </label>
                     <textarea rows="5" cols="20" id="titleInfo0">
                     </textarea>
-                    <label for="genreName0">Movie Genre: </label>
+                    <label for="genreName0" class="sr-only">Movie Genre: </label>
                     <select id="genreName0">
                         <option>Horror</option>
                         <option>Fantasy</option>
@@ -137,13 +137,13 @@ $db = get_db();
             <form class="form-group col-9" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
-                    <label for="titleName1">Movie Title: </label>
+                    <label for="titleName1" class="sr-only">Movie Title: </label>
                     <input type="" id="titleName1">
                     </input>
-                    <label for="titleInfo1">Movie Description: </label>
+                    <label for="titleInfo1" class="sr-only">Movie Description: </label>
                     <textarea rows="5" cols="20" id="titleInfo1">
                     </textarea>
-                    <label for="genreName1">Movie Genre: </label>
+                    <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <select id="genreName1">
                         <option>Horror</option>
                         <option>Fantasy</option>
