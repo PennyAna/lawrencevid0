@@ -69,7 +69,8 @@ legend {
 
 }
 #showNewBtn {
-
+    color: white;
+    background-color: var(--color-dark-cyan);
 }
 #showNewForm {
 
@@ -125,7 +126,7 @@ button {
 
 }    
 #genreResults {
-    
+
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
