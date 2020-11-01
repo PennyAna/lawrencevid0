@@ -81,6 +81,7 @@ legend {
 }
 li {
     color: var(--color-gun-metal);
+    float: left;
 }   
 #alphaList {
 
