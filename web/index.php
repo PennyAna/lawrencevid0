@@ -51,9 +51,9 @@ $db = get_db();
             </form>
             <!--button to show add new movie form-->
             <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie"></input>
+            Alphabetical Index of Movies
             <ul id="alphaIndex">
-                Alphabetical Index of Movies
-                <li><input? id="aIndex">A</a></li>
+                <li><a href="./alpha.php" id="aIndex">A</a></li>
                 <li><a href="./alpha.php" id="bIndex">B</a></li>
                 <li><a href="./alpha.php" id="cIndex">C</a></li>
                 <li><a href="./alpha.php" id="dIndex">D</a></li>
