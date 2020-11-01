@@ -18,16 +18,23 @@ $db = get_db();
         <header>Lawrence Family Video Library</header>
         <main>
             <form class="form-group" action="search.php" method="POST">
-                <label for="searchMovieName">Search Movie By Name</label>
-                <input type="text" id="searchMovieName">
-                </input>
-                <button type="submit" id="searchBtn">Search Movies</button>
-            </form>
+                <fieldset>
+                    <legend>Search</legend>
+                    <label for="searchMovieName"> Search Movie By Name</label>
+                    <input type="text" id="searchMovieName"></input>
+                    <button type="submit" id="searchBtn">Search Movies</button>
+                    </fieldset>
+                </form>
+                
+                
             <form class="form-group" action="genre.php" method="POST" >
-                <select id="genreSelect">
+                <fieldset>
+                    <legend>Genre</legend>
+                    <select id="genreSelect">
 
-                </select>
-                <button type="submit">Sort By Genre</button>
+                    </select>
+                    <button type="submit">Sort By Genre</button>
+                </fieldset>
             </form>
             <!--button to show add new movie form-->
             <input type="button" id="showNewForm"></input>
@@ -70,47 +77,53 @@ $db = get_db();
             <!--form for inserting new movie information
             hidden until needed-->
             <form class="form-group" id="newMovieForm" action="insert.php" method="POST">
-                <label for="titleName">Movie Title: </label>
-                <input type="" id="titleName">
-                </input>
-                <label for="titleInfo">Movie Description: </label>
-                <textarea rows="10" id="titleInfo">
-                </textarea>
-                <label for="genreName">Movie Genre: </label>
-                <select id="genreName">
-                    <option>Horror</option>
-                    <option>Fantasy</option>
-                    <option>Action</option>
-                    <option>Adventure</option>
-                    <option>Comedy</option>
-                    <option>Drama</option>
-                    <option>Historical</option>
-                    <option>Mystery</option>
-                    <option>Documentary</option>
-                    <option>Romance</option>
-                    <option>Science Fiction</option>
-                    <option>Thriller</option>
-                    <option>Western</option>
-                    <option>Animation</option>
-                    <option>Kids</option>
-                    <option>Television</option>
-                </select>
-                <button type="submit" id="addBtn">Add New Movie</button>
+                <fieldset>
+                    <legend>New Movie</legend>
+                    <label for="titleName">Movie Title: </label>
+                    <input type="" id="titleName">
+                    </input>
+                    <label for="titleInfo">Movie Description: </label>
+                    <textarea rows="10" id="titleInfo">
+                    </textarea>
+                    <label for="genreName">Movie Genre: </label>
+                    <select id="genreName">
+                        <option>Horror</option>
+                        <option>Fantasy</option>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>Comedy</option>
+                        <option>Drama</option>
+                        <option>Historical</option>
+                        <option>Mystery</option>
+                        <option>Documentary</option>
+                        <option>Romance</option>
+                        <option>Science Fiction</option>
+                        <option>Thriller</option>
+                        <option>Western</option>
+                        <option>Animation</option>
+                        <option>Kids</option>
+                        <option>Television</option>
+                    </select>
+                    <button type="submit" id="addBtn">Add New Movie</button>
+                </fieldset> 
             </form>
             <!--form for updating current movie information
             hidden until needed when edit clicked next to movie title-->
             <form class="form-group" id="editMovieForm" action="edit.php" method="POST">
-                <label for="titleName">Movie Title: </label>
-                <input type="" id="titleName">
-                </input>
-                <label for="titleInfo">Movie Description: </label>
-                <textarea rows="10" id="titleInfo">
-                </textarea>
-                <label for="genreName">Movie Genre: </label>
-                <select id="genreName">
+                <fieldset>
+                    <legend>Edit Movie Info</legend>
+                    <label for="titleName">Movie Title: </label>
+                    <input type="" id="titleName">
+                    </input>
+                    <label for="titleInfo">Movie Description: </label>
+                    <textarea rows="10" id="titleInfo">
+                    </textarea>
+                    <label for="genreName">Movie Genre: </label>
+                    <select id="genreName">
 
-                </select>
-                <button type="submit" id="editBtn">Update Movie Info</button>
+                    </select>
+                    <button type="submit" id="editBtn">Update Movie Info</button>
+                </fieldset>
             </form>
             <!-- bootstrap suppts form controls: input, textarea, checkbox, radio, select -->
             <!--bootstrap suppts all html5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color-->
