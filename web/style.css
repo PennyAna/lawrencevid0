@@ -10,6 +10,8 @@
     --color-yale-blue: #124E78; /*yale blue*/
     --color-lulu-blue: #0E6BA8; /*honolulu blue*/
     --color-uran-blue: #A6E1FA; /*uranian blue*/
+    --color-dark-cyan: #0F8B8D; /*dark cyan*/
+    --color-gun-metal: #143642; /*gunmetal*/
 }
 a:visited {
 	color: var(--color-royal-dark);
