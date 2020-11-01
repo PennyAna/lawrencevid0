@@ -1,3 +1,4 @@
+<?php 
 function get_db() {
 	$db = NULL;
 
@@ -21,3 +22,4 @@ function get_db() {
 
 	return $db;
 }
+?>
