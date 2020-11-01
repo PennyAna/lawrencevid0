@@ -1,7 +1,3 @@
-<?php
-require("dbConnect.php");
-$db = get_db();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +12,8 @@ $db = get_db();
 </head>
     <body>
         <header>Lawrence Family Video Library</header>
-        <main>  
-            <div id="genreResults">
+        <main>
+            <div id="searchResults">
 
             </div>
         </main>
