@@ -71,6 +71,7 @@ legend {
 #showNewBtn {
     color: white;
     background-color: var(--color-dark-cyan);
+    font-family: Arial, Helvetica, sans-serif;
 }
 #showNewForm {
 
