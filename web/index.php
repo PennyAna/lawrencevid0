@@ -24,9 +24,7 @@ $db = get_db();
                     <input type="text" id="searchMovieName"></input>
                     <button type="submit" id="searchBtn">Search Movies</button>
                     </fieldset>
-                </form>
-                
-                
+                </form>   
             <form class="form-group" id="genreForm" action="genre.php" method="POST" >
                 <fieldset>
                     <legend>Genre</legend>
@@ -52,7 +50,7 @@ $db = get_db();
                 </fieldset>
             </form>
             <!--button to show add new movie form-->
-            <input id="showNewBtn" type="button" id="showNewForm"></input>
+            <input id="showNewBtn" type="button" id="showNewForm">Add New Movie</input>
             <ul id="alphaIndex">
                 Alphabetical Index of Movies
                 <li><input? id="aIndex">A</a></li>
