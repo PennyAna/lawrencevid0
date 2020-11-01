@@ -43,6 +43,7 @@ main {
 }
 .form-group {
     font-family: Arial, Helvetica, sans-serif;
+    float: left;
 }
 #searchForm {
 
@@ -86,7 +87,7 @@ legend {
 
 }
 #alpha2 {
-    
+
 }
 li {
     color: var(--color-gun-metal);

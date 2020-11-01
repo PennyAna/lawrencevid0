@@ -52,7 +52,7 @@ $db = get_db();
             <!--button to show add new movie form-->
             <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie"></input>
             Alphabetical Index of Movies
-            <ul id="alphaIndex">
+            <ul id="alpha0" class="alphaIndex">
                 <li><a href="./alpha.php" id="aIndex">A</a></li>
                 <li><a href="./alpha.php" id="bIndex">B</a></li>
                 <li><a href="./alpha.php" id="cIndex">C</a></li>
@@ -63,6 +63,8 @@ $db = get_db();
                 <li><a href="./alpha.php" id="hIndex">H</a></li>
                 <li><a href="./alpha.php" id="iIndex">I</a></li>
                 <li><a href="./alpha.php" id="jIndex">J</a></li>
+            </ul>
+            <ul id="alpha1" class="alphaIndex">
                 <li><a href="./alpha.php" id="kIndex">K</a></li>
                 <li><a href="./alpha.php" id="lIndex">L</a></li>
                 <li><a href="./alpha.php" id="mIndex">M</a></li>
@@ -73,6 +75,8 @@ $db = get_db();
                 <li><a href="./alpha.php" id="rIndex">R</a></li>
                 <li><a href="./alpha.php" id="sIndex">S</a></li>
                 <li><a href="./alpha.php" id="tIndex">T</a></li>
+            </ul>
+            <ul id="alpha2" class="alphaIndex">
                 <li><a href="./alpha.php" id="uIndex">U</a></li>
                 <li><a href="./alpha.php" id="vIndex">V</a></li>
                 <li><a href="./alpha.php" id="wIndex">W</a></li>
