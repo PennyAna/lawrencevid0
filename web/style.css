@@ -77,7 +77,7 @@ legend {
 
 }
 li {
-
+    background-color: var(--color-gun-metal);
 }   
 #alphaList {
 
@@ -117,8 +117,8 @@ option {
 
 }
 button {
-    color: var(--color-ltblue);
-    background-color: var(--color-berry);
+    color: white;
+    background-color: var(--color-dark-cyan);
     }
     
     /* Extra small devices (phones, 600px and down) */
