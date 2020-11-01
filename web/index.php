@@ -16,8 +16,8 @@ $db = get_db();
 </head>
     <body>
         <header>Lawrence Family Video Library</header>
-        <main>
-            <form class="form-group" id="searchForm" action="search.php" method="POST">
+        <div class="row">
+            <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName"> Search Movie By Name</label>
@@ -25,7 +25,9 @@ $db = get_db();
                     <button type="submit" id="searchBtn">Search Movies</button>
                 </fieldset>
             </form>   <br><br>
-            <form class="form-group" id="genreForm" action="genre.php" method="POST" >
+        </div>
+        <div class="row">
+            <form class="form-group col-9" id="genreForm" action="genre.php" method="POST" >
                 <fieldset>
                     <legend>Genre</legend>
                     <select id="genreSelect">
@@ -49,10 +51,12 @@ $db = get_db();
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
             </form> <br><br>
+        </div>
+        <div class="row">
             <!--button to show add new movie form-->
-            <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie"></input>
+            <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie" class="col-9"></input>
             Alphabetical Index of Movies
-            <ul id="alpha0" class="alphaIndex">
+            <ul id="alpha0" class="alphaIndex col-3">
                 <li><a href="./alpha.php" id="aIndex">A</a></li>
                 <li><a href="./alpha.php" id="bIndex">B</a></li>
                 <li><a href="./alpha.php" id="cIndex">C</a></li>
@@ -64,7 +68,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="iIndex">I</a></li>
                 <li><a href="./alpha.php" id="jIndex">J</a></li>
             </ul> <br>
-            <ul id="alpha1" class="alphaIndex">
+            <ul id="alpha1" class="alphaIndex col-3">
                 <li><a href="./alpha.php" id="kIndex">K</a></li>
                 <li><a href="./alpha.php" id="lIndex">L</a></li>
                 <li><a href="./alpha.php" id="mIndex">M</a></li>
@@ -76,7 +80,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="sIndex">S</a></li>
                 <li><a href="./alpha.php" id="tIndex">T</a></li>
             </ul> <br>
-            <ul id="alpha2" class="alphaIndex">
+            <ul id="alpha2" class="alphaIndex col-3">
                 <li><a href="./alpha.php" id="uIndex">U</a></li>
                 <li><a href="./alpha.php" id="vIndex">V</a></li>
                 <li><a href="./alpha.php" id="wIndex">W</a></li>
@@ -85,7 +89,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="zIndex">Z</a></li>
             </ul> <br>
             <!--ul ready for populating from database based on letter chosen from index, hidden until filled-->
-            <ul id="alphaList">
+            <ul id="alphaList" class="col-3">
             <!--need to put 'edit' buttons next to each populated titles-->
             <?php
 
@@ -93,7 +97,9 @@ $db = get_db();
             </ul> <br><br>
             <!--form for inserting new movie information
             hidden until needed-->
-            <form class="form-group" id="newMovieForm" action="insert.php" method="POST">
+    </div>
+            <div class="row">
+            <form class="form-group col-9" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
                     <legend>New Movie</legend>
                     <label for="titleName0">Movie Title: </label>
@@ -124,9 +130,11 @@ $db = get_db();
                     <button type="submit" id="addBtn">Add New Movie</button>
                 </fieldset> 
             </form> <br><br>
+        </div>
             <!--form for updating current movie information
             hidden until needed when edit clicked next to movie title-->
-            <form class="form-group" id="editMovieForm" action="edit.php" method="POST">
+            <div class="row">
+            <form class="form-group col-9" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1">Movie Title: </label>
@@ -157,9 +165,9 @@ $db = get_db();
                     <button type="submit" id="editBtn">Update Movie Info</button>
                 </fieldset>
             </form> <br><br>
+</div>
             <!-- bootstrap suppts form controls: input, textarea, checkbox, radio, select -->
             <!--bootstrap suppts all html5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color-->
             <!--labels required for screen readers to process correctly, use .sr-only to hide otherwise-->
-        </main>
     </body>
 </html>
