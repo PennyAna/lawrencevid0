@@ -1,5 +1,4 @@
 <?php
-session_start();
 require("dbConnect.php");
 $db = get_db();
 ?>
@@ -75,11 +74,26 @@ $db = get_db();
                 <input type="" id="titleName">
                 </input>
                 <label for="titleInfo">Movie Description: </label>
-                <textarea id="titleInfo">
+                <textarea rows="10" id="titleInfo">
                 </textarea>
                 <label for="genreName">Movie Genre: </label>
                 <select id="genreName">
-
+                    <option>Horror</option>
+                    <option>Fantasy</option>
+                    <option>Action</option>
+                    <option>Adventure</option>
+                    <option>Comedy</option>
+                    <option>Drama</option>
+                    <option>Historical</option>
+                    <option>Mystery</option>
+                    <option>Documentary</option>
+                    <option>Romance</option>
+                    <option>Science Fiction</option>
+                    <option>Thriller</option>
+                    <option>Western</option>
+                    <option>Animation</option>
+                    <option>Kids</option>
+                    <option>Television</option>
                 </select>
                 <button type="submit" id="addBtn">Add New Movie</button>
             </form>
@@ -90,7 +104,7 @@ $db = get_db();
                 <input type="" id="titleName">
                 </input>
                 <label for="titleInfo">Movie Description: </label>
-                <textarea id="titleInfo">
+                <textarea rows="10" id="titleInfo">
                 </textarea>
                 <label for="genreName">Movie Genre: </label>
                 <select id="genreName">
