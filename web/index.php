@@ -31,7 +31,22 @@ $db = get_db();
                 <fieldset>
                     <legend>Genre</legend>
                     <select id="genreSelect">
-
+                        <option>Horror</option>
+                        <option>Fantasy</option>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>Comedy</option>
+                        <option>Drama</option>
+                        <option>Historical</option>
+                        <option>Mystery</option>
+                        <option>Documentary</option>
+                        <option>Romance</option>
+                        <option>Science Fiction</option>
+                        <option>Thriller</option>
+                        <option>Western</option>
+                        <option>Animation</option>
+                        <option>Kids</option>
+                        <option>Television</option>
                     </select>
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
@@ -120,7 +135,7 @@ $db = get_db();
                     </textarea>
                     <label for="genreName1">Movie Genre: </label>
                     <select id="genreName1">
-                    <option>Horror</option>
+                        <option>Horror</option>
                         <option>Fantasy</option>
                         <option>Action</option>
                         <option>Adventure</option>

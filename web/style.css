@@ -51,16 +51,16 @@ legend {
 
 } 
 #searchMovieName {
-
+    background-color: var(--color-spring-bud);
 }
 #searchBtn {
 
 }
 #genreForm {
-
+ 
 }
 #genreSelect {
-
+    background-color: var(--color-spring-bud);
 }
 #genreBtn {
 
