@@ -39,7 +39,6 @@ main {
 
 }
 .form-group {
-    overflow: auto;
 
 }
 #searchForm {
@@ -85,13 +84,14 @@ li {
 
 }
 #titleName0 {
-
+    background-color: var(--color-spring-bud);
 }
 #titleInfo0 {
+    background-color: var(--color-spring-bud);
 
 }
 #genreName0 {
-
+    background-color: var(--color-spring-bud);
 }
 option {
 
@@ -103,13 +103,13 @@ option {
 
 }
 #titleName1 {
-
+    background-color: var(--color-spring-bud);
 }
 #titleInfo1 {
-
+    background-color: var(--color-spring-bud);
 }
 #genreName1 {
-
+    background-color: var(--color-spring-bud);
 }
 #editBtn {
 
