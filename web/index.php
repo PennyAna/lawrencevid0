@@ -50,7 +50,7 @@ $db = get_db();
                 </fieldset>
             </form>
             <!--button to show add new movie form-->
-            <input id="showNewBtn" type="button" id="showNewForm">Add New Movie</input>
+            <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie"></input>
             <ul id="alphaIndex">
                 Alphabetical Index of Movies
                 <li><input? id="aIndex">A</a></li>
