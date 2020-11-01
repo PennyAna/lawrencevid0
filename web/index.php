@@ -17,7 +17,7 @@ $db = get_db();
     <body>
         <header>Lawrence Family Video Library</header>
         <main>
-            <form class="form-group" action="search.php" method="POST">
+            <form class="form-group" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName"> Search Movie By Name</label>
@@ -27,17 +27,17 @@ $db = get_db();
                 </form>
                 
                 
-            <form class="form-group" action="genre.php" method="POST" >
+            <form class="form-group" id="genreForm" action="genre.php" method="POST" >
                 <fieldset>
                     <legend>Genre</legend>
                     <select id="genreSelect">
 
                     </select>
-                    <button type="submit">Sort By Genre</button>
+                    <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
             </form>
             <!--button to show add new movie form-->
-            <input type="button" id="showNewForm"></input>
+            <input id="showNewBtn" type="button" id="showNewForm"></input>
             <ul id="alphaIndex">
                 Alphabetical Index of Movies
                 <li><input? id="aIndex">A</a></li>
@@ -79,14 +79,14 @@ $db = get_db();
             <form class="form-group" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
                     <legend>New Movie</legend>
-                    <label for="titleName">Movie Title: </label>
-                    <input type="" id="titleName">
+                    <label for="titleName0">Movie Title: </label>
+                    <input type="" id="titleName0">
                     </input>
-                    <label for="titleInfo">Movie Description: </label>
-                    <textarea rows="10" id="titleInfo">
+                    <label for="titleInfo0">Movie Description: </label>
+                    <textarea rows="10" id="titleInfo0">
                     </textarea>
-                    <label for="genreName">Movie Genre: </label>
-                    <select id="genreName">
+                    <label for="genreName0">Movie Genre: </label>
+                    <select id="genreName0">
                         <option>Horror</option>
                         <option>Fantasy</option>
                         <option>Action</option>
@@ -112,14 +112,14 @@ $db = get_db();
             <form class="form-group" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
-                    <label for="titleName">Movie Title: </label>
-                    <input type="" id="titleName">
+                    <label for="titleName1">Movie Title: </label>
+                    <input type="" id="titleName1">
                     </input>
-                    <label for="titleInfo">Movie Description: </label>
-                    <textarea rows="10" id="titleInfo">
+                    <label for="titleInfo1">Movie Description: </label>
+                    <textarea rows="10" id="titleInfo1">
                     </textarea>
-                    <label for="genreName">Movie Genre: </label>
-                    <select id="genreName">
+                    <label for="genreName1">Movie Genre: </label>
+                    <select id="genreName1">
 
                     </select>
                     <button type="submit" id="editBtn">Update Movie Info</button>
