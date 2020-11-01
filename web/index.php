@@ -23,8 +23,8 @@ $db = get_db();
                     <label for="searchMovieName"> Search Movie By Name</label>
                     <input type="text" id="searchMovieName"></input>
                     <button type="submit" id="searchBtn">Search Movies</button>
-                    </fieldset>
-                </form>   
+                </fieldset>
+            </form>   <br><br>
             <form class="form-group" id="genreForm" action="genre.php" method="POST" >
                 <fieldset>
                     <legend>Genre</legend>
@@ -48,7 +48,7 @@ $db = get_db();
                     </select>
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
-            </form>
+            </form> <br><br>
             <!--button to show add new movie form-->
             <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie"></input>
             Alphabetical Index of Movies
@@ -63,7 +63,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="hIndex">H</a></li>
                 <li><a href="./alpha.php" id="iIndex">I</a></li>
                 <li><a href="./alpha.php" id="jIndex">J</a></li>
-            </ul>
+            </ul> <br>
             <ul id="alpha1" class="alphaIndex">
                 <li><a href="./alpha.php" id="kIndex">K</a></li>
                 <li><a href="./alpha.php" id="lIndex">L</a></li>
@@ -75,7 +75,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="rIndex">R</a></li>
                 <li><a href="./alpha.php" id="sIndex">S</a></li>
                 <li><a href="./alpha.php" id="tIndex">T</a></li>
-            </ul>
+            </ul> <br>
             <ul id="alpha2" class="alphaIndex">
                 <li><a href="./alpha.php" id="uIndex">U</a></li>
                 <li><a href="./alpha.php" id="vIndex">V</a></li>
@@ -83,14 +83,14 @@ $db = get_db();
                 <li><a href="./alpha.php" id="xIndex">X</a></li>
                 <li><a href="./alpha.php" id="yIndex">Y</a></li>
                 <li><a href="./alpha.php" id="zIndex">Z</a></li>
-            </ul>
+            </ul> <br>
             <!--ul ready for populating from database based on letter chosen from index, hidden until filled-->
             <ul id="alphaList">
             <!--need to put 'edit' buttons next to each populated titles-->
             <?php
 
             ?>
-            </ul>
+            </ul> <br><br>
             <!--form for inserting new movie information
             hidden until needed-->
             <form class="form-group" id="newMovieForm" action="insert.php" method="POST">
@@ -100,7 +100,7 @@ $db = get_db();
                     <input type="" id="titleName0">
                     </input>
                     <label for="titleInfo0">Movie Description: </label>
-                    <textarea rows="10" id="titleInfo0">
+                    <textarea rows="5" cols="20" id="titleInfo0">
                     </textarea>
                     <label for="genreName0">Movie Genre: </label>
                     <select id="genreName0">
@@ -123,7 +123,7 @@ $db = get_db();
                     </select>
                     <button type="submit" id="addBtn">Add New Movie</button>
                 </fieldset> 
-            </form>
+            </form> <br><br>
             <!--form for updating current movie information
             hidden until needed when edit clicked next to movie title-->
             <form class="form-group" id="editMovieForm" action="edit.php" method="POST">
@@ -133,7 +133,7 @@ $db = get_db();
                     <input type="" id="titleName1">
                     </input>
                     <label for="titleInfo1">Movie Description: </label>
-                    <textarea rows="10" id="titleInfo1">
+                    <textarea rows="5" cols="20" id="titleInfo1">
                     </textarea>
                     <label for="genreName1">Movie Genre: </label>
                     <select id="genreName1">
@@ -156,7 +156,7 @@ $db = get_db();
                     </select>
                     <button type="submit" id="editBtn">Update Movie Info</button>
                 </fieldset>
-            </form>
+            </form> <br><br>
             <!-- bootstrap suppts form controls: input, textarea, checkbox, radio, select -->
             <!--bootstrap suppts all html5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color-->
             <!--labels required for screen readers to process correctly, use .sr-only to hide otherwise-->
