@@ -104,14 +104,14 @@ li {
 #newMovieForm {
 
 }
-#titleName0 {
+#titleName {
     background-color: var(--color-spring-bud);
 }
-#titleInfo0 {
+#titleInfo {
     background-color: var(--color-spring-bud);
 
 }
-#genreName0 {
+#genreName {
     background-color: var(--color-spring-bud);
 }
 option {
@@ -122,15 +122,6 @@ option {
 }
 #editMovieForm {
 
-}
-#titleName1 {
-    background-color: var(--color-spring-bud);
-}
-#titleInfo1 {
-    background-color: var(--color-spring-bud);
-}
-#genreName1 {
-    background-color: var(--color-spring-bud);
 }
 #editBtn {
 
@@ -145,26 +136,22 @@ button {
 #genreResults {
 
 }
-#resetBtn0 {
+#resetBtn {
 
 }
-#resetBtn1 {
+.changeMovieForm {
 
 }
 .errorMsg {
+    background: #f99;
+    border: #900 1px solid;
+    display: none;
+}
+#titleNameError {
 
 }
-#titleName0error {
+#titleInfoError {
 
-}
-#titleInfo0error {
-
-}
-#titleName1error {
-
-}
-#titleInfo1error {
-    
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {

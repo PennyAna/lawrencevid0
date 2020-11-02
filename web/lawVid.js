@@ -1,26 +1,50 @@
 const searchTitleForm = FormData.searchForm;
-document.getElementById("searchForm");
-const searchTitleField = searchTitleForm.getElementById("searchMovieName|");
-searchTitleField.addEventListener('change', () => checkTitleSearch(), false);
+// document.getElementById("searchForm");
+const searchTitleField = searchTitleForm.getElementById("searchMovieName");
+searchTitleField.addEventListener('change', () => checkTitleSearch(searchTitleForm), false);
 
 const newMovieForm = document.getElementById("newMovieForm");
-const newMovieName = newMovieForm.getElementById("titleName0");
-const newMovieInfo = newMovieForm.getElementById("titleInfo0");
-newMovieName.addEventListener('change', () => checkMovieName(), false);
-newMovieInfo.addEventListener('change', () => checkMovieInfo(), false);
+const newMovieName = newMovieForm.getElementById("titleName");
+const newMovieInfo = newMovieForm.getElementById("titleInfo");
+newMovieName.addEventListener('blur', () => checkMovieName(newMovieForm), false);
+newMovieInfo.addEventListener('blur', () => checkMovieInfo(newMovieForm), false);
 
 const editMovieForm = document.getElementById("editMovieForm");
-const editMovieName = editMovieForm.getElementById("titleName1");
-const editMovieInfo = editMovieForm.getElementById("titleInfo1");
-editMovieName.addEventListener('change', () => checkMovieName(), false);
-editMovieInfo.addEventListener('change', () => checkMovieInfo(), false);
+const editMovieName = editMovieForm.getElementById("titleName");
+const editMovieInfo = editMovieForm.getElementById("titleInfo");
+editMovieName.addEventListener('blur', () => checkMovieName(editMovieForm), false);
+editMovieInfo.addEventListener('blur', () => checkMovieInfo(editMovieForm), false);
 
-function checkTitleSearch() {
-
+function checkTitleSearch(searchTitleForm) {
+    const searchError = this.getElementById.getElementByClass("errorMsg");
+    const searchField = this.getElementByid.getElementById("searchMovieName");
+    if (searchField.value == "") {
+        searchError.display = compact;
+        searchError.innerHTML = "Did you forget to put in the name?";
+    }
+    else {
+        searchError.display = none;
+    }
 }
-function checkMovieName () {
-
+function checkMovieName (thisForm) {
+    const movieName = thisForm.getElementById("titleName");
+    const movieError = thisForm.getElementByClass("errorMsg");
+    if (movieName.value == "") {
+        movieError.titleNameError.display = compact;
+        movieError.titleNameError.innerHTML = "Did you forget to put in the name?";
+    }
+    else {
+        movieError.titleNameError.display = none;
+    }
 }
-function checkMovieInfo() {
-
+function checkMovieInfo(thisForm) {
+    const movieInfo = thisForm.getElementById("titleInfo");
+    const infoError = thisForm.getElementByClass("errorMsg");
+    if (movieInfo.value == "") {
+        infoError.titleInfoError.display = compact;
+        infoError.titleInfoError.innerHTML = "Did you forget to put in the description? (Optional)";
+    }
+    else {
+        infoError.titleInfoError.display = none;
+    }
 }

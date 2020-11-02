@@ -22,10 +22,11 @@ $db = get_db();
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <input type="text" id="searchMovieName" placeholder='Search Movie Name'></input>
+                    <p id="searchTitleError" class="errorMsg"></p>
                     <button type="submit" id="searchBtn">Search Movies</button>
                 </fieldset>
             </form>   
-            <div id="searchFormResults" hidden>
+            <div id="searchFormResults">
 
             </div>
             <br><br>
@@ -56,7 +57,7 @@ $db = get_db();
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
             </form> <br><br>
-            <div id="genreSearchForm" hidden>
+            <div id="genreSearchForm">
 
             </div>
         </div>
@@ -99,7 +100,7 @@ $db = get_db();
                 <li><a href="./alpha.php" id="yIndex">Y</a></li>
                 <li><a href="./alpha.php" id="zIndex">Z</a></li>
             </ul> <br>
-            <!--ul ready for populating from database based on letter chosen from index, hidden until filled-->
+            <!--ul ready for populating from database based on letter chosen from index, until filled-->
             <ul id="alphaList" class="col-3">
             <!--need to put 'edit' buttons next to each populated titles-->
             <?php
@@ -107,22 +108,22 @@ $db = get_db();
             ?>
             </ul> <br><br>
             <!--form for inserting new movie information
-            hidden until needed-->
+         until needed-->
     </div>
             <div class="row">
-            <form class="form-group col-9" id="newMovieForm" action="insert.php" method="POST">
+            <form class="form-group col-9 changeMovieForm" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
                     <legend>New Movie</legend>
-                    <label for="titleName0" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName0" required placeholder="Movie Title">
+                    <label for="titleName" class="sr-only">Movie Title: </label>
+                    <input type="" id="titleName" required placeholder="Movie Title">
                     </input>
-                    <p id="titleName0error" class="errorMsg" hidden></p>
+                    <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo0" class="sr-only">Movie Description: </label>
                     <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description">
-                    <p id="titleInfo0error" class="errorMsg" hidden></p>
+                    <p id="titleInfoError" class="errorMsg"></p>
                     </textarea>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
-                    <select id="genreName0" required>
+                    <select id="genreName" required>
                     <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
                         <option value='2'>Fantasy</option>
@@ -142,26 +143,26 @@ $db = get_db();
                         <option value='16'>Television</option>
                     </select>
                     <button type="submit" id="addBtn">Add New Movie</button>
-                    <button type="reset" id="resetBtn1">Reset Movie Info</button>
+                    <button type="reset" id="resetBtn">Reset Movie Info</button>
                 </fieldset> 
             </form> <br><br>
         </div>
             <!--form for updating current movie information
-            hidden until needed when edit clicked next to movie title-->
+         until needed when edit clicked next to movie title-->
             <div class="row">
-            <form class="form-group col-9" id="editMovieForm" action="edit.php" method="POST">
+            <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
-                    <label for="titleName1" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName1" required placeholder="Movie Title">
+                    <label for="titleName" class="sr-only">Movie Title: </label>
+                    <input type="" id="titleName" required placeholder="Movie Title">
                     </input>
-                    <p id="titleName1error" class="errorMsg" hidden></p>
-                    <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
-                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description">
+                    <p id="titleNameError" class="errorMsg"></p>
+                    <label for="titleInfo" class="sr-only" optional>Movie Description: </label>
+                    <textarea rows="5" cols="20" id="titleInfo" placeholder="Brief Movie Description">
                     </textarea>
-                    <p id="titleInfo1error" class="errorMsg" hidden></p>
-                    <label for="genreName1" class="sr-only">Movie Genre: </label>
-                    <select id="genreName1" required>
+                    <p id="titleInfoError" class="errorMsg"></p>
+                    <label for="genreName" class="sr-only">Movie Genre: </label>
+                    <select id="genreName" required>
                         <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
                         <option value='2'>Fantasy</option>
@@ -181,7 +182,7 @@ $db = get_db();
                         <option value='16'>Television</option>
                     </select>
                     <button type="submit" id="editBtn">Update Movie Info</button>
-                    <button type="reset" id="resetBtn1">Reset Movie Info</button>
+                    <button type="reset" id="resetBtn">Reset Movie Info</button>
                 </fieldset>
             </form> <br><br>
 </div>
