@@ -31,22 +31,23 @@ $db = get_db();
                 <fieldset>
                     <legend>Genre</legend>
                     <select id="genreSelect">
-                        <option>Horror</option>
-                        <option>Fantasy</option>
-                        <option>Action</option>
-                        <option>Adventure</option>
-                        <option>Comedy</option>
-                        <option>Drama</option>
-                        <option>Historical</option>
-                        <option>Mystery</option>
-                        <option>Documentary</option>
-                        <option>Romance</option>
-                        <option>Science Fiction</option>
-                        <option>Thriller</option>
-                        <option>Western</option>
-                        <option>Animation</option>
-                        <option>Kids</option>
-                        <option>Television</option>
+                    <option value='0' selected>Choose Genre</option>
+                        <option value='1'>Horror</option>
+                        <option value='2'>Fantasy</option>
+                        <option value='3'>Action</option>
+                        <option value='4'>Adventure</option>
+                        <option value='5'>Comedy</option>
+                        <option value='6'>Drama</option>
+                        <option value='7'>Historical</option>
+                        <option value='8'>Mystery</option>
+                        <option value='9'>Documentary</option>
+                        <option value='10'>Romance</option>
+                        <option value='11'>Science Fiction</option>
+                        <option value='12'>Thriller</option>
+                        <option value='13'>Western</option>
+                        <option value='14'>Animation</option>
+                        <option value='15'>Kids</option>
+                        <option value='16'>Television</option>
                     </select>
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
@@ -111,22 +112,23 @@ $db = get_db();
                     </textarea>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
                     <select id="genreName0" required>
-                        <option>Horror</option>
-                        <option>Fantasy</option>
-                        <option>Action</option>
-                        <option>Adventure</option>
-                        <option>Comedy</option>
-                        <option>Drama</option>
-                        <option>Historical</option>
-                        <option>Mystery</option>
-                        <option>Documentary</option>
-                        <option>Romance</option>
-                        <option>Science Fiction</option>
-                        <option>Thriller</option>
-                        <option>Western</option>
-                        <option>Animation</option>
-                        <option>Kids</option>
-                        <option>Television</option>
+                    <option value='0' selected>Choose Genre</option>
+                        <option value='1'>Horror</option>
+                        <option value='2'>Fantasy</option>
+                        <option value='3'>Action</option>
+                        <option value='4'>Adventure</option>
+                        <option value='5'>Comedy</option>
+                        <option value='6'>Drama</option>
+                        <option value='7'>Historical</option>
+                        <option value='8'>Mystery</option>
+                        <option value='9'>Documentary</option>
+                        <option value='10'>Romance</option>
+                        <option value='11'>Science Fiction</option>
+                        <option value='12'>Thriller</option>
+                        <option value='13'>Western</option>
+                        <option value='14'>Animation</option>
+                        <option value='15'>Kids</option>
+                        <option value='16'>Television</option>
                     </select>
                     <button type="submit" id="addBtn">Add New Movie</button>
                 </fieldset> 
