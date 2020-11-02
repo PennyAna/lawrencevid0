@@ -21,7 +21,7 @@ $db = get_db();
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
-                    <h3>Search Movie By Name</h3>
+                    <h5>Search Movie By Name</h5>
                     <input type="text" id="searchMovieName" placeholder='Search Movie Name'></input>
                     <p id="searchTitleError" class="errorMsg"></p>
                     <button type="submit" id="searchBtn">Search Movies</button>
@@ -36,7 +36,7 @@ $db = get_db();
             <form class="form-group col-9" id="genreForm" action="genre.php" method="POST" >
                 <fieldset>
                     <legend>Genre</legend>
-                    <h3>Search By Genre</h3>
+                    <h5>Search By Genre</h5>
                     <select id="genreSelect">
                     <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
@@ -117,17 +117,17 @@ $db = get_db();
                 <fieldset>
                     <legend>New Movie</legend>
                     <label for="titleName" class="sr-only">Movie Title: </label>
-                    <h3>Add New Movie Name</h3>
+                    <h5>Add New Movie Name</h5>
                     <input type="" id="titleName" required placeholder="Movie Title">
                     </input>
                     <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo" class="sr-only">Movie Description: </label>
-                    <h3>Add New Movie Description</h3>
+                    <h5>Add New Movie Description</h5>
                     <textarea rows="5" cols="20" id="titleInfo" optional placeholder="Brief Movie Description">
                     </textarea>
                     <p id="titleInfoError" class="errorMsg"></p>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
-                    <h3>Add New Movie Genre</h3>
+                    <h5>Add New Movie Genre</h5>
                     <select id="genreName" required>
                     <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
@@ -159,17 +159,17 @@ $db = get_db();
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName" class="sr-only">Movie Title: </label>
-                    <h3>Add New Movie Name</h3>
+                    <h5>Add New Movie Name</h5>
                     <input type="" id="titleName" required placeholder="Movie Title">
                     </input>
                     <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo" class="sr-only" optional>Movie Description: </label>
-                    <h3>Add New Movie Description</h3>
+                    <h5>Add New Movie Description</h5>
                     <textarea rows="5" cols="20" id="titleInfo" placeholder="Brief Movie Description">
                     </textarea>
                     <p id="titleInfoError" class="errorMsg"></p>
                     <label for="genreName" class="sr-only">Movie Genre: </label>
-                    <h3>Add New Movie Genre</h3>
+                    <h5>Add New Movie Genre</h5>
                     <select id="genreName" required>
                         <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
