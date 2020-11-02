@@ -151,6 +151,21 @@ button {
 #resetBtn1 {
 
 }
+.errorMsg {
+
+}
+#titleName0error {
+
+}
+#titleInfo0error {
+
+}
+#titleName1error {
+
+}
+#titleInfo1error {
+    
+}
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
         [class*="col-"] {width: 100%;}

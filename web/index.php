@@ -21,10 +21,14 @@ $db = get_db();
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
-                    <input type="text" id="searchMovieName"></input>
+                    <input type="text" id="searchMovieName" placeholder='Search Movie Name'></input>
                     <button type="submit" id="searchBtn">Search Movies</button>
                 </fieldset>
-            </form>   <br><br>
+            </form>   
+            <div id="searchFormResults" hidden>
+
+            </div>
+            <br><br>
         </div>
         <div class="row">
             <form class="form-group col-9" id="genreForm" action="genre.php" method="POST" >
@@ -52,11 +56,16 @@ $db = get_db();
                     <button id="genreBtn" type="submit">Sort By Genre</button>
                 </fieldset>
             </form> <br><br>
+            <div id="genreSearchForm" hidden>
+
+            </div>
         </div>
         <div class="row">
             <!--button to show add new movie form-->
             <input id="showNewBtn" type="button" id="showNewForm" value="Add New Movie" class="col-9"></input>
             <br><br><br>
+        </div>
+        <div class="row">
             Alphabetical Index of Movies
             <ul id="alpha0" class="alphaIndex col-3">
                 <li><a href="./alpha.php" id="aIndex">A</a></li>
@@ -105,10 +114,12 @@ $db = get_db();
                 <fieldset>
                     <legend>New Movie</legend>
                     <label for="titleName0" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName0" required>
+                    <input type="" id="titleName0" required placeholder="Movie Title">
                     </input>
+                    <p id="titleName0error" class="errorMsg" hidden></p>
                     <label for="titleInfo0" class="sr-only">Movie Description: </label>
-                    <textarea rows="5" cols="20" id="titleInfo0" optional>
+                    <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description">
+                    <p id="titleInfo0error" class="errorMsg" hidden></p>
                     </textarea>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
                     <select id="genreName0" required>
@@ -142,11 +153,13 @@ $db = get_db();
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName1" required>
+                    <input type="" id="titleName1" required placeholder="Movie Title">
                     </input>
+                    <p id="titleName1error" class="errorMsg" hidden></p>
                     <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
-                    <textarea rows="5" cols="20" id="titleInfo1">
+                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description">
                     </textarea>
+                    <p id="titleInfo1error" class="errorMsg" hidden></p>
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <select id="genreName1" required>
                         <option value='0' selected>Choose Genre</option>
