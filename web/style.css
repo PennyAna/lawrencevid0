@@ -32,7 +32,6 @@ a:active {
 body {
     background-color: var(--color-uran-blue);
     color: var(--color-oxford-blue);
-    overflow: auto;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     justify-content: center;
     align-items: center;

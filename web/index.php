@@ -104,13 +104,13 @@ $db = get_db();
                 <fieldset>
                     <legend>New Movie</legend>
                     <label for="titleName0" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName0">
+                    <input type="" id="titleName0" required>
                     </input>
                     <label for="titleInfo0" class="sr-only">Movie Description: </label>
-                    <textarea rows="5" cols="20" id="titleInfo0">
+                    <textarea rows="5" cols="20" id="titleInfo0" optional>
                     </textarea>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
-                    <select id="genreName0">
+                    <select id="genreName0" required>
                         <option>Horror</option>
                         <option>Fantasy</option>
                         <option>Action</option>
@@ -139,13 +139,13 @@ $db = get_db();
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1" class="sr-only">Movie Title: </label>
-                    <input type="" id="titleName1">
+                    <input type="" id="titleName1" required>
                     </input>
-                    <label for="titleInfo1" class="sr-only">Movie Description: </label>
+                    <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
                     <textarea rows="5" cols="20" id="titleInfo1">
                     </textarea>
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
-                    <select id="genreName1">
+                    <select id="genreName1" required>
                         <option>Horror</option>
                         <option>Fantasy</option>
                         <option>Action</option>
