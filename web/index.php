@@ -120,8 +120,8 @@ $db = get_db();
                     <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo0" class="sr-only">Movie Description: </label>
                     <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description">
-                    <p id="titleInfoError" class="errorMsg"></p>
                     </textarea>
+                    <p id="titleInfoError" class="errorMsg"></p>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
                     <select id="genreName" required>
                     <option value='0' selected>Choose Genre</option>
