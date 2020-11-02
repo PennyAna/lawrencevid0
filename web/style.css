@@ -106,25 +106,27 @@ li {
 }
 #titleName {
     background-color: var(--color-spring-bud);
+    float: left;
 }
 #titleInfo {
     background-color: var(--color-spring-bud);
-
+    float: left;
 }
 #genreName {
+    float: left;
     background-color: var(--color-spring-bud);
 }
 option {
-
+    align-self: center;
 }
 #addBtn {
-
+    float: left;
 }
 #editMovieForm {
 
 }
 #editBtn {
-
+    float: left;
 }
 button {
     color: white;
@@ -137,10 +139,10 @@ button {
 
 }
 #resetBtn {
-
+    float: left;
 }
 .changeMovieForm {
-
+    align-items: center;
 }
 .errorMsg {
     background: #f99;
@@ -148,10 +150,10 @@ button {
     display: none;
 }
 #titleNameError {
-
+    float: left;
 }
 #titleInfoError {
-
+    float: left;
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
