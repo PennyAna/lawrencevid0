@@ -1,4 +1,5 @@
-const searchTitleForm = document.getElementById("searchForm");
+const searchTitleForm = FormData.searchForm;
+document.getElementById("searchForm");
 const searchTitleField = searchTitleForm.getElementById("searchMovieName|");
 searchTitleField.addEventListener('change', () => checkTitleSearch(), false);
 
@@ -21,5 +22,5 @@ function checkMovieName () {
 
 }
 function checkMovieInfo() {
-    
+
 }
