@@ -1,10 +1,3 @@
-
-//const formSearchData = new FormData(formSearch);
-
-//const formNewData = new FormData(formNew);
-
-//const formEditData = new FormData(formEdit);
-
 function checkNewForm() {
     const newTitle = document.getElementById("titleName0");
     const newInfo = document.getElementById("titleInfo0");
@@ -23,9 +16,8 @@ function checkEditForm() {
 }
 
 function checkTitleSearch() {
-    const formSearch = document.getElementById("searchForm");
-    const searchError = formSearch.getElementByClass("errorMsg");
-    const searchField = formSearch.getElementById("searchMovieName");
+    const searchError = document.getElementById("searchTitleError");
+    const searchField = document.getElementById("searchMovieName");
     if (searchField.value == "") {
         searchError.style.display = block;
         searchError.innerHTML = "Did you forget to put in the name?";
@@ -36,7 +28,7 @@ function checkTitleSearch() {
 }
 function checkMovieName (title, error) {
     if (title.value == "") {
-        error.style.visibility = ;
+        error.style.display = block;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
