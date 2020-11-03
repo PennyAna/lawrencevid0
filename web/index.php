@@ -116,19 +116,19 @@ $db = get_db();
             <form class="form-group col-9 changeMovieForm" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
                     <legend>New Movie</legend>
-                    <label for="titleName" class="sr-only">Movie Title: </label>
+                    <label for="titleName0" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="" id="titleName" required placeholder="Movie Title" onblur="checkMovieName()">
+                    <input type="" id="titleName0" required placeholder="Movie Title" onblur="checkNewForm()">
                     </input>
-                    <p id="titleNameError" class="errorMsg"></p>
-                    <label for="titleInfo" class="sr-only">Movie Description: </label>
+                    <p id="titleNameError0" class="errorMsg"></p>
+                    <label for="titleInfo0" class="sr-only">Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo" optional placeholder="Brief Movie Description" onblur="checkMovieInfo()">
+                    <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description" onblur="checkNewForm()">
                     </textarea>
-                    <p id="titleInfoError" class="errorMsg"></p>
+                    <p id="titleInfoError0" class="errorMsg"></p>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
                     <h5>Add New Movie Genre</h5>
-                    <select id="genreName" required>
+                    <select id="genreName0" required>
                     <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
                         <option value='2'>Fantasy</option>
@@ -147,8 +147,8 @@ $db = get_db();
                         <option value='15'>Kids</option>
                         <option value='16'>Television</option>
                     </select>
-                    <button type="submit" id="addBtn">Add New Movie</button>
-                    <button type="reset" id="resetBtn">Reset Movie Info</button>
+                    <button type="submit" id="addBtn0">Add New Movie</button>
+                    <button type="reset" id="resetBtn0">Reset Movie Info</button>
                 </fieldset> 
             </form> <br><br>
         </div>
@@ -158,19 +158,19 @@ $db = get_db();
             <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
-                    <label for="titleName" class="sr-only">Movie Title: </label>
+                    <label for="titleName1" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="" id="titleName" required placeholder="Movie Title" onblur="checkMovieName()">
+                    <input type="" id="titleName1" required placeholder="Movie Title" onblur="checkEditForm()">
                     </input>
-                    <p id="titleNameError" class="errorMsg"></p>
-                    <label for="titleInfo" class="sr-only" optional>Movie Description: </label>
+                    <p id="titleNameError1" class="errorMsg"></p>
+                    <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo" placeholder="Brief Movie Description" onblur="checkMovieInfo()">
+                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description" onblur="checkEditForm()">
                     </textarea>
-                    <p id="titleInfoError" class="errorMsg"></p>
-                    <label for="genreName" class="sr-only">Movie Genre: </label>
+                    <p id="titleInfoError1" class="errorMsg"></p>
+                    <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <h5>Add New Movie Genre</h5>
-                    <select id="genreName" required>
+                    <select id="genreName1" required>
                         <option value='0' selected>Choose Genre</option>
                         <option value='1'>Horror</option>
                         <option value='2'>Fantasy</option>
@@ -189,8 +189,8 @@ $db = get_db();
                         <option value='15'>Kids</option>
                         <option value='16'>Television</option>
                     </select>
-                    <button type="submit" id="editBtn">Update Movie Info</button>
-                    <button type="reset" id="resetBtn">Reset Movie Info</button>
+                    <button type="submit" id="editBtn1">Update Movie Info</button>
+                    <button type="reset" id="resetBtn1">Reset Movie Info</button>
                 </fieldset>
             </form> <br><br>
 </div>

@@ -1,22 +1,28 @@
 const formSearch = document.getElementById("searchForm");
-const formSearchData = new FormData(formSearch);
+//const formSearchData = new FormData(formSearch);
 const formNew = document.getElementById("newMovieForm");
-const formNewData = new FormData(formNew);
+//const formNewData = new FormData(formNew);
 const formEdit = document.getElementById("editMovieForm");
-const formEditData = new FormData(formEdit);
-console.log(formSearch);
-console.log(formSearchData);
-console.log(formNew);
-console.log(formNewData);
-console.log(formEdit);
-console.log(formEditData);
+//const formEditData = new FormData(formEdit);
 
-const searchTitleForm = document.getElementById("searchForm");
-const searchTitleField = searchTitleForm.getElementById("searchMovieName");
-const newMovieForm = document.getElementById("newMovieForm");
-const editMovieForm = document.getElementById("editMovieForm");
+function checkNewForm() {
+    const newTitle = formNew.getElementById("titleName0");
+    const newInfo = formNew.getElementById("titleInfo0");
+    const titleError = formNew.getElementById("titleNameError0");
+    const infoError = formNew.getElementById("titleInfoError0");
+    checkMovieName(newTitle, titleError);
+    checkMovieInfo(newInfo, infoError);
+}
+function checkEditForm() {
+    const editTitle = formNew.getElementById("titleName1");
+    const editInfo = formNew.getElementById("titleInfo1");
+    const titleError = formNew.getElementById("titleNameError1");
+    const infoError = formNew.getElementById("titleInfoError1");
+    checkMovieName(editTitle, titleError);
+    checkMovieInfo(editInfo, infoError);
+}
 
-function checkTitleSearch() {
+function checkTitleSearch(title) {
     const searchError = searchTitleForm.getElementByClass("errorMsg");
     const searchField = searchTitleForm.getElementById("searchMovieName");
     if (searchField.value == "") {
@@ -27,29 +33,21 @@ function checkTitleSearch() {
         searchError.display = none;
     }
 }
-function checkMovieName () {
-    const movieForm = this.parentElement;
-    console.log(this.FormData);
-    const movieName = movieForm.getElementById("titleName");
-    const movieError = movieForm.getElementByClass("errorMsg");
-    if (movieName.value == "") {
-        movieError.titleNameError.display = compact;
-        movieError.titleNameError.innerHTML = "Did you forget to put in the name?";
+function checkMovieName (title, error) {
+    if (title.value == "") {
+        error.display = compact;
+        error.innerHTML = "Did you forget to put in the name?";
     }
     else {
-        movieError.titleNameError.display = none;
+        error.display = none;
     }
 }
-function checkMovieInfo() {
-    const movieForm = this.parentElement;
-    console.log(this.FormData);
-    const movieInfo = movieForm.getElementById("titleInfo");
-    const infoError = movieForm.parentElement.getElementByClass("errorMsg");
-    if (movieInfo.value == "") {
-        infoError.titleInfoError.display = compact;
-        infoError.titleInfoError.innerHTML = "Did you forget to put in the description? (Optional)";
+function checkMovieInfo(info, error) {
+    if (info.value == "") {
+        error.display = compact;
+        error.innerHTML = "Did you forget to put in the name?";
     }
     else {
-        infoError.titleInfoError.display = none;
+        error.display = none;
     }
 }
