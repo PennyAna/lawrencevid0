@@ -6,11 +6,10 @@
 //const formEditData = new FormData(formEdit);
 
 function checkNewForm() {
-    const formNew = document.getElementById("newMovieForm");
-    const newTitle = formNew.getElementById("titleName0");
-    const newInfo = formNew.getElementById("titleInfo0");
-    const titleError = formNew.getElementById("titleNameError0");
-    const infoError = formNew.getElementById("titleInfoError0");
+    const newTitle = document.getElementById("titleName0");
+    const newInfo = document.getElementById("titleInfo0");
+    const titleError = document.getElementById("titleNameError0");
+    const infoError = document.getElementById("titleInfoError0");
     checkMovieName(newTitle, titleError);
     checkMovieInfo(newInfo, infoError);
 }
