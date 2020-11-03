@@ -196,7 +196,7 @@ $db = get_db();
             <!-- bootstrap suppts form controls: input, textarea, checkbox, radio, select -->
             <!--bootstrap suppts all html5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color-->
             <!--labels required for screen readers to process correctly, use .sr-only to hide otherwise-->
-    </body>
+    
 <script>
 function checkNewForm() {
     const newTitle = document.getElementById("titleName0");
@@ -244,4 +244,5 @@ function checkMovieInfo(info, error) {
         error.style.display = none;
     }
 }</script>
+</body>
 </html>
