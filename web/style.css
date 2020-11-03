@@ -29,6 +29,30 @@ a:active {
 	background-color: transparent;
 	text-decoration: none;
 }
+.row {
+
+}  
+.col-9 {
+
+}  
+fieldset {
+    
+}
+legend {
+
+}
+.sr-only {
+    
+}
+h5 {
+
+}
+label {
+
+}
+.col-3 {
+
+}
 body {
     background-color: var(--color-uran-blue);
     color: var(--color-oxford-blue);
@@ -37,9 +61,6 @@ body {
     align-items: center;
 }
 header {
-
-}
-main {
 
 }
 .form-group {
@@ -63,6 +84,12 @@ legend {
 #searchBtn {
 
 }
+#searchResults {
+
+} 
+#searchTitleError {
+
+}
 #genreForm {
  
 }
@@ -70,6 +97,9 @@ legend {
     background-color: var(--color-spring-bud);
 }
 #genreBtn {
+
+}
+#genreResults {
 
 }
 #showNewBtn {
@@ -104,43 +134,79 @@ li {
 #newMovieForm {
 
 }
-#titleName {
+#titleName0 {
     background-color: var(--color-spring-bud);
     float: left;
 }
-#titleInfo {
+#titleNameError0 {
+    float: left;
+}
+#titleInfo0 {
     background-color: var(--color-spring-bud);
     float: left;
 }
-#genreName {
+#titleInfoError0 {
+    float: left;
+}
+#genreName0 {
     float: left;
     background-color: var(--color-spring-bud);
 }
 option {
     align-self: center;
 }
-#addBtn {
+#addBtn0 {
     float: left;
 }
+#resetBtn0 {
+    float: left;
+}
+            
 #editMovieForm {
 
 }
-#editBtn {
+#titleName1 {
+    background-color: var(--color-spring-bud);
+    float: left;
+}
+#titleInfo1 {
+    background-color: var(--color-spring-bud);
+    float: left;
+}
+#genreName1 {
+    float: left;
+    background-color: var(--color-spring-bud);
+}
+option {
+    align-self: center;
+}
+
+#editBtn0 {
+    float: left;
+}
+#resetBtn1 {
+    float: left;
+}
+#titleNameError1 {
+    float: left;
+}
+#titleInfoError1 {
     float: left;
 }
 button {
     color: white;
     background-color: var(--color-dark-cyan);
 }
-#searchResults {
-
-}    
-#genreResults {
+.changeMovieForm {
+    align-items: center;
+}
+#editMovieForm {
 
 }
-#resetBtn {
+#editBtn1 {
     float: left;
 }
+
 .changeMovieForm {
     align-items: center;
 }
@@ -148,64 +214,6 @@ button {
     background: #f99;
     border: #900 1px solid;
     display: none;
-}
-#titleNameError {
-    float: left;
-}
-#titleInfoError {
-    float: left;
-}
-}
-#titleName {
-    background-color: var(--color-spring-bud);
-    float: left;
-}
-#titleInfo {
-    background-color: var(--color-spring-bud);
-    float: left;
-}
-#genreName {
-    float: left;
-    background-color: var(--color-spring-bud);
-}
-option {
-    align-self: center;
-}
-#addBtn {
-    float: left;
-}
-#editMovieForm {
-
-}
-#editBtn {
-    float: left;
-}
-button {
-    color: white;
-    background-color: var(--color-dark-cyan);
-}
-#searchResults {
-
-}    
-#genreResults {
-
-}
-#resetBtn {
-    float: left;
-}
-.changeMovieForm {
-    align-items: center;
-}
-.errorMsg {
-    background: #f99;
-    border: #900 1px solid;
-    display: none;
-}
-#titleNameError {
-    float: left;
-}
-#titleInfoError {
-    float: left;
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
