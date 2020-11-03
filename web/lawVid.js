@@ -1,3 +1,16 @@
+const formSearch = document.getElementById("searchForm");
+const formSearchData = new FormData(formSearch);
+const formNew = document.getElementById("newMovieForm");
+const formNewData = new FormData(formNew);
+const formEdit = document.getElementById("editMovieForm");
+const formEditData = new FormData(formEdit);
+console.log(formSearch);
+console.log(formSearchData);
+console.log(formNew);
+console.log(formNewData);
+console.log(formEdit);
+console.log(formEditData);
+
 const searchTitleForm = document.getElementById("searchForm");
 const searchTitleField = searchTitleForm.getElementById("searchMovieName");
 const newMovieForm = document.getElementById("newMovieForm");
