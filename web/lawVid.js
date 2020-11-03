@@ -1,21 +1,21 @@
 const searchTitleForm = FormData.searchForm;
 // document.getElementById("searchForm");
 const searchTitleField = searchTitleForm.getElementById("searchMovieName");
-searchTitleField.addEventListener('change', () => checkTitleSearch(searchTitleForm), false);
+searchTitleField.addEventListener('change', () => checkTitleSearch(), false);
 
 const newMovieForm = document.getElementById("newMovieForm");
 const newMovieName = newMovieForm.getElementById("titleName");
 const newMovieInfo = newMovieForm.getElementById("titleInfo");
-newMovieName.addEventListener('blur', () => checkMovieName(newMovieForm), false);
-newMovieInfo.addEventListener('blur', () => checkMovieInfo(newMovieForm), false);
+newMovieName.addEventListener('blur', () => checkMovieName(), false);
+newMovieInfo.addEventListener('blur', () => checkMovieInfo(), false);
 
 const editMovieForm = document.getElementById("editMovieForm");
 const editMovieName = editMovieForm.getElementById("titleName");
 const editMovieInfo = editMovieForm.getElementById("titleInfo");
-editMovieName.addEventListener('blur', () => checkMovieName(editMovieForm), false);
-editMovieInfo.addEventListener('blur', () => checkMovieInfo(editMovieForm), false);
+editMovieName.addEventListener('blur', () => checkMovieName(), false);
+editMovieInfo.addEventListener('blur', () => checkMovieInfo(), false);
 
-function checkTitleSearch(searchTitleForm) {
+function checkTitleSearch() {
     const searchError = this.getElementById.getElementByClass("errorMsg");
     const searchField = this.getElementByid.getElementById("searchMovieName");
     if (searchField.value == "") {
@@ -26,7 +26,7 @@ function checkTitleSearch(searchTitleForm) {
         searchError.display = none;
     }
 }
-function checkMovieName (thisForm) {
+function checkMovieName () {
     const movieName = thisForm.getElementById("titleName");
     const movieError = thisForm.getElementByClass("errorMsg");
     if (movieName.value == "") {

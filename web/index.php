@@ -22,7 +22,7 @@ $db = get_db();
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <h5>Search Movie By Name</h5>
-                    <input type="text" id="searchMovieName" placeholder='Search Movie Name'></input>
+                    <input type="text" id="searchMovieName" placeholder='Search Movie Name' onblue="checkTitleSearch()"></input>
                     <p id="searchTitleError" class="errorMsg"></p>
                     <button type="submit" id="searchBtn">Search Movies</button>
                 </fieldset>
@@ -118,12 +118,12 @@ $db = get_db();
                     <legend>New Movie</legend>
                     <label for="titleName" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="" id="titleName" required placeholder="Movie Title">
+                    <input type="" id="titleName" required placeholder="Movie Title" onblur="checkMovieName()">
                     </input>
                     <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo" class="sr-only">Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo" optional placeholder="Brief Movie Description">
+                    <textarea rows="5" cols="20" id="titleInfo" optional placeholder="Brief Movie Description" onblur="checkMovieInfo()">
                     </textarea>
                     <p id="titleInfoError" class="errorMsg"></p>
                     <label for="genreName0" class="sr-only">Movie Genre: </label>
@@ -160,12 +160,12 @@ $db = get_db();
                     <legend>Edit Movie Info</legend>
                     <label for="titleName" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="" id="titleName" required placeholder="Movie Title">
+                    <input type="" id="titleName" required placeholder="Movie Title" onblur="checkMovieName()">
                     </input>
                     <p id="titleNameError" class="errorMsg"></p>
                     <label for="titleInfo" class="sr-only" optional>Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo" placeholder="Brief Movie Description">
+                    <textarea rows="5" cols="20" id="titleInfo" placeholder="Brief Movie Description" onblur="checkMovieInfo()">
                     </textarea>
                     <p id="titleInfoError" class="errorMsg"></p>
                     <label for="genreName" class="sr-only">Movie Genre: </label>
