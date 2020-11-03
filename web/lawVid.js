@@ -36,7 +36,7 @@ function checkTitleSearch() {
 }
 function checkMovieName (title, error) {
     if (title.value == "") {
-        error.style.display = block;
+        error.style.visibility = ;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
