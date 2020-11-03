@@ -28,28 +28,28 @@ function checkTitleSearch() {
     const searchError = formSearch.getElementByClass("errorMsg");
     const searchField = formSearch.getElementById("searchMovieName");
     if (searchField.value == "") {
-        searchError.display = 
+        searchError.style.display = block;
         searchError.innerHTML = "Did you forget to put in the name?";
     }
     else {
-        searchError.display = none;
+        searchError.style.display = none;
     }
 }
 function checkMovieName (title, error) {
     if (title.value == "") {
-        error.display = block;
+        error.style.display = block;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
-        error.display = none;
+        error.style.display = none;
     }
 }
 function checkMovieInfo(info, error) {
     if (info.value == "") {
-        error.display = block;
+        error.style.display = block;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
-        error.display = none;
+        error.style.display = none;
     }
 }
