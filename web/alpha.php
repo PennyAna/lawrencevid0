@@ -15,9 +15,9 @@ $db = get_db();
 	<script src="./lawVid.js"></script>
 </head>
     <body>
-        <header>Lawrence Family Video Library</header>
+        <h4><a href="index.php">Lawrence Family Video Library</a></h4>
         <div class="row">
-            Alphabetical Index of Movies
+            <h3>Alphabetical Index of Movies</h3>
             <ul id="alpha0" class="alphaIndex col-3">
                 <li><a href="./alpha.php" id="aIndex">A</a></li>
                 <li><a href="./alpha.php" id="bIndex">B</a></li>

@@ -11,11 +11,12 @@
 	<script src="./lawVid.js"></script>
 </head>
     <body>
-        <header>Lawrence Family Video Library</header>
-        <main>
+	<h4><a href="index.php">Lawrence Family Video Library</a></h4>
+        <div class="row">
+            <h3>Results of Title Search</h3>
             <div id="searchResults">
-
+			<?php
+			?>
             </div>
-        </main>
     </body>
 </html>

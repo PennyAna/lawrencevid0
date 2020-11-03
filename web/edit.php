@@ -15,9 +15,9 @@ $db = get_db();
 	<script src="./lawVid.js"></script>
 </head>
     <body>
-        <header>Lawrence Family Video Library</header>
         <!--form for updating current movie information
          until needed when edit clicked next to movie title-->
+         <h4><a href="index.php">Lawrence Family Video Library</a></h4>
          <div class="row">
             <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="edit.php" method="POST">
                 <fieldset>
