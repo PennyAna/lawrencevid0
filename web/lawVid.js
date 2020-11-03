@@ -19,7 +19,7 @@ function checkTitleSearch() {
     const searchError = document.getElementById("searchTitleError");
     const searchField = document.getElementById("searchMovieName");
     if (searchField.value == "") {
-        searchError.style.display = block;
+        searchError.style.display = inline;
         searchError.innerHTML = "Did you forget to put in the name?";
     }
     else {
@@ -28,7 +28,7 @@ function checkTitleSearch() {
 }
 function checkMovieName (title, error) {
     if (title.value == "") {
-        error.style.display = block;
+        error.style.display = inline;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
@@ -37,7 +37,7 @@ function checkMovieName (title, error) {
 }
 function checkMovieInfo(info, error) {
     if (info.value == "") {
-        error.style.display = block;
+        error.style.display = inline;
         error.innerHTML = "Did you forget to put in the name?";
     }
     else {
