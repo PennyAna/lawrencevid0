@@ -15,9 +15,9 @@ $db = get_db();
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <body>
+    <input type="text" style="display:none" autofocus="true"></input>
         <header>Lawrence Family Video Library</header>
         <div class="row">
-            <input type="text" style="display:none" autofocus="true"></input>
             <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
