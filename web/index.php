@@ -17,6 +17,7 @@ $db = get_db();
     <body>
         <header>Lawrence Family Video Library</header>
         <div class="row">
+            <input type="text" style="display:none" autofocus="true"></input>
             <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
