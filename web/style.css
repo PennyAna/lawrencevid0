@@ -107,6 +107,12 @@ legend {
     background-color: var(--color-dark-cyan);
     font-family: Arial, Helvetica, sans-serif;
 }
+#showNewBtn {
+float: left;
+}
+#showAlpha {
+float: right;
+}
 #showNewForm {
 
 }
