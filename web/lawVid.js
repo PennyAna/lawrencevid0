@@ -15,8 +15,10 @@ function checkTitleSearch() {
     }
 }
 function checkMovieName () {
-    const movieName = this.parentElement.getElementById("titleName");
-    const movieError = this.parentElement.getElementByClass("errorMsg");
+    const movieForm = this.parentElement;
+    console.log(movieForm, this);
+    const movieName = movieForm.getElementById("titleName");
+    const movieError = movieForm.getElementByClass("errorMsg");
     if (movieName.value == "") {
         movieError.titleNameError.display = compact;
         movieError.titleNameError.innerHTML = "Did you forget to put in the name?";
@@ -26,8 +28,10 @@ function checkMovieName () {
     }
 }
 function checkMovieInfo() {
-    const movieInfo = this.parentElement.getElementById("titleInfo");
-    const infoError = this.parentElement.getElementByClass("errorMsg");
+    const movieForm = this.parentElement;
+    console.log(movieForm, this);
+    const movieInfo = movieForm.getElementById("titleInfo");
+    const infoError = movieForm.parentElement.getElementByClass("errorMsg");
     if (movieInfo.value == "") {
         infoError.titleInfoError.display = compact;
         infoError.titleInfoError.innerHTML = "Did you forget to put in the description? (Optional)";
