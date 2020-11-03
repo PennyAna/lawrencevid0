@@ -58,8 +58,8 @@ $db = get_db();
         </div>
         <div class="row">
             <!--button to show add new movie/show alpha forms-->
-            <input id="showNewBtn" type="button" value="Add New Movie" class="col-6 btns" action="insert.php"></input>
-            <input id="showAlpha" type="button" id="showAlpha" value="Search Alphabetically" class="col-6 btns" action="alpha.php"></input>
+            <input id="showNewBtn" type="button" value="Add New Movie" class="col-6 btns" onclick="insert.php"></input>
+            <input id="showAlpha" type="button" id="showAlpha" value="Search Alphabetically" class="col-6 btns" onclick="alpha.php"></input>
         </div>
     <script src="./lawVid.js"></script>
     </body>
