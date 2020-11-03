@@ -58,9 +58,9 @@ $db = get_db();
         </div>
         <div class="row">
             <!--button to show add new movie/show alpha forms-->
-            <input id="showNewBtn" type="button" value="Add New Movie" class="col-6" action="insert.php"></input>
+            <input id="showNewBtn" type="button" value="Add New Movie" class="col-6 btns" action="insert.php"></input>
             <br><br><br>
-            <input id="showAlpha" type="button" id="showAlpha" value="Search Alphabetically" class="col-6" action="alpha.php"></input>
+            <input id="showAlpha" type="button" id="showAlpha" value="Search Alphabetically" class="col-6 btns" action="alpha.php"></input>
         </div>
     <script src="./lawVid.js"></script>
     </body>

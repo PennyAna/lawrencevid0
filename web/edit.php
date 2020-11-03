@@ -56,3 +56,45 @@ $db = get_db();
         </main>
     </body>
 </html>
+ <!--form for updating current movie information
+         until needed when edit clicked next to movie title-->
+         <div class="row">
+            <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="edit.php" method="POST">
+                <fieldset>
+                    <legend>Edit Movie Info</legend>
+                    <label for="titleName1" class="sr-only">Movie Title: </label>
+                    <h5>Add New Movie Name</h5>
+                    <input type="" id="titleName1" required placeholder="Movie Title" onblur="checkEditForm()">
+                    </input>
+                    <div id="titleNameError1" class="errorMsg"></div>
+                    <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
+                    <h5>Add New Movie Description</h5>
+                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description" onblur="checkEditForm()">
+                    </textarea>
+                    <div id="titleInfoError1" class="errorMsg"></div>
+                    <label for="genreName1" class="sr-only">Movie Genre: </label>
+                    <h5>Add New Movie Genre</h5>
+                    <select id="genreName1" required>
+                        <option value='0' selected>Choose Genre</option>
+                        <option value='1'>Horror</option>
+                        <option value='2'>Fantasy</option>
+                        <option value='3'>Action</option>
+                        <option value='4'>Adventure</option>
+                        <option value='5'>Comedy</option>
+                        <option value='6'>Drama</option>
+                        <option value='7'>Historical</option>
+                        <option value='8'>Mystery</option>
+                        <option value='9'>Documentary</option>
+                        <option value='10'>Romance</option>
+                        <option value='11'>Science Fiction</option>
+                        <option value='12'>Thriller</option>
+                        <option value='13'>Western</option>
+                        <option value='14'>Animation</option>
+                        <option value='15'>Kids</option>
+                        <option value='16'>Television</option>
+                    </select>
+                    <button type="submit" id="editBtn1">Update Movie Info</button>
+                    <button type="reset" id="resetBtn1">Reset Movie Info</button>
+                </fieldset>
+            </form> <br><br>
+</div>

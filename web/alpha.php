@@ -161,3 +161,47 @@ $db = get_db();
         </main>
     </body>
 </html>
+<div class="row">
+            Alphabetical Index of Movies
+            <ul id="alpha0" class="alphaIndex col-3">
+                <li><a href="./alpha.php" id="aIndex">A</a></li>
+                <li><a href="./alpha.php" id="bIndex">B</a></li>
+                <li><a href="./alpha.php" id="cIndex">C</a></li>
+                <li><a href="./alpha.php" id="dIndex">D</a></li>
+                <li><a href="./alpha.php" id="eIndex">E</a></li>
+                <li><a href="./alpha.php" id="fIndex">F</a></li>
+                <li><a href="./alpha.php" id="gIndex">G</a></li>
+                <li><a href="./alpha.php" id="hIndex">H</a></li>
+                <li><a href="./alpha.php" id="iIndex">I</a></li>
+                <li><a href="./alpha.php" id="jIndex">J</a></li>
+            </ul> <br>
+            <ul id="alpha1" class="alphaIndex col-3">
+                <li><a href="./alpha.php" id="kIndex">K</a></li>
+                <li><a href="./alpha.php" id="lIndex">L</a></li>
+                <li><a href="./alpha.php" id="mIndex">M</a></li>
+                <li><a href="./alpha.php" id="nIndex">N</a></li>
+                <li><a href="./alpha.php" id="oIndex">O</a></li>
+                <li><a href="./alpha.php" id="pIndex">P</a></li>
+                <li><a href="./alpha.php" id="qIndex">Q</a></li>
+                <li><a href="./alpha.php" id="rIndex">R</a></li>
+                <li><a href="./alpha.php" id="sIndex">S</a></li>
+                <li><a href="./alpha.php" id="tIndex">T</a></li>
+            </ul> <br>
+            <ul id="alpha2" class="alphaIndex col-3">
+                <li><a href="./alpha.php" id="uIndex">U</a></li>
+                <li><a href="./alpha.php" id="vIndex">V</a></li>
+                <li><a href="./alpha.php" id="wIndex">W</a></li>
+                <li><a href="./alpha.php" id="xIndex">X</a></li>
+                <li><a href="./alpha.php" id="yIndex">Y</a></li>
+                <li><a href="./alpha.php" id="zIndex">Z</a></li>
+            </ul> <br>
+            <!--ul ready for populating from database based on letter chosen from index, until filled-->
+            <ul id="alphaList" class="col-3">
+            <!--need to put 'edit' buttons next to each populated titles-->
+            <?php
+
+            ?>
+            </ul> <br><br>
+            <!--form for inserting new movie information
+         until needed-->
+    </div>
