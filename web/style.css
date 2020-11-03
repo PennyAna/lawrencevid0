@@ -14,6 +14,10 @@
     --color-gun-metal: #143642; /*gunmetal*/
 }
 /*index.php*/
+html {
+	position: relative;
+	min-height: 100%;
+}
 body {
     background-color: var(--color-uran-blue);
     color: var(--color-oxford-blue);
