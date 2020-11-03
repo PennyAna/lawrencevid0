@@ -45,7 +45,7 @@ a:active {
 	text-decoration: none;
 }
 .row {
-
+    border: 10px solid var(--color-orange-yellow);
 }  
 fieldset {
     
