@@ -25,11 +25,7 @@ function checkTitleSearch() {
     const searchError = document.getElementById("searchTitleError");
     const searchField = document.getElementById("searchMovieName");
     if (searchField.value == "") {
-        searchError.style.display = inline;
         searchError.innerHTML = "Did you forget to put in the name?";
-    }
-    else {
-        searchError.style.display = none;
     }
 }
 function checkMovieName (title, error) {
