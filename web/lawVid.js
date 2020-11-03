@@ -16,7 +16,7 @@ function checkTitleSearch() {
 }
 function checkMovieName () {
     const movieForm = this.parentElement;
-    console.log(this);
+    console.log(this.FormData);
     const movieName = movieForm.getElementById("titleName");
     const movieError = movieForm.getElementByClass("errorMsg");
     if (movieName.value == "") {
@@ -29,7 +29,7 @@ function checkMovieName () {
 }
 function checkMovieInfo() {
     const movieForm = this.parentElement;
-    console.log(this);
+    console.log(this.FormData);
     const movieInfo = movieForm.getElementById("titleInfo");
     const infoError = movieForm.parentElement.getElementByClass("errorMsg");
     if (movieInfo.value == "") {
