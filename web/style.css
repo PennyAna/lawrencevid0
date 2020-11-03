@@ -1,4 +1,4 @@
-/* HEX */
+/* HEX palette */
 :root {
     --color-spring-bud: #F0F0C9; /*pale spring bud*/
     --color-orange-yellow: #F2BB05; /*orange yellow*/
@@ -13,6 +13,21 @@
     --color-dark-cyan: #0F8B8D; /*dark cyan*/
     --color-gun-metal: #143642; /*gunmetal*/
 }
+/*index.php*/
+body {
+    background-color: var(--color-uran-blue);
+    color: var(--color-oxford-blue);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    justify-content: center;
+    align-items: center;
+}
+.form-group {
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    justify-content: center;
+    align-items: center;
+}
+
 a:visited {
 	color: var(--color-royal-dark);
 	background-color: transparent;
@@ -30,9 +45,6 @@ a:active {
 	text-decoration: none;
 }
 .row {
-
-}  
-.col-9 {
 
 }  
 fieldset {
@@ -53,21 +65,11 @@ label {
 .col-3 {
 
 }
-body {
-    background-color: var(--color-uran-blue);
-    color: var(--color-oxford-blue);
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    justify-content: center;
-    align-items: center;
-}
-header {
+.col-6 {
 
 }
-.form-group {
-    font-family: Arial, Helvetica, sans-serif;
-    float: left;
-    justify-content: center;
-    align-items: center;
+.col-9 {
+
 }
 #searchForm {
 
@@ -84,9 +86,6 @@ legend {
 #searchBtn {
 
 }
-#searchResults {
-
-} 
 #searchTitleError {
 
 }
@@ -97,9 +96,6 @@ legend {
     background-color: var(--color-spring-bud);
 }
 #genreBtn {
-
-}
-#genreResults {
 
 }
 .btns {
@@ -113,9 +109,7 @@ float: left;
 #showAlpha {
 float: right;
 }
-#showNewForm {
-
-}
+/*alpha.php*/
 .alphaIndex {
 
 }
@@ -137,6 +131,7 @@ li {
 #alphaList {
 
 }
+/*insert.php*/
 #newMovieForm {
 
 }
@@ -160,14 +155,14 @@ li {
 }
 option {
     align-self: center;
-}
+} /*shared with edit.php*/
 #addBtn0 {
     float: left;
 }
 #resetBtn0 {
     float: left;
 }
-            
+/*edit.php*/    
 #editMovieForm {
 
 }
@@ -175,44 +170,31 @@ option {
     background-color: var(--color-spring-bud);
     float: left;
 }
+#titleNameError1 {
+    float: left;
+}
 #titleInfo1 {
     background-color: var(--color-spring-bud);
+    float: left;
+}
+#titleInfoError1 {
     float: left;
 }
 #genreName1 {
     float: left;
     background-color: var(--color-spring-bud);
 }
-option {
-    align-self: center;
-}
-
-#editBtn0 {
+#editBtn1 {
     float: left;
 }
 #resetBtn1 {
-    float: left;
-}
-#titleNameError1 {
-    float: left;
-}
-#titleInfoError1 {
     float: left;
 }
 button {
     color: white;
     background-color: var(--color-dark-cyan);
 }
-.changeMovieForm {
-    align-items: center;
-}
-#editMovieForm {
-
-}
-#editBtn1 {
-    float: left;
-}
-
+/*shared by edit.php and insert.php*/
 .changeMovieForm {
     align-items: center;
 }
@@ -220,11 +202,18 @@ button {
     background: #f99;
     border: #900 1px solid;
 }
-    /* Extra small devices (phones, 600px and down) */
+/*search.php*/
+#searchResults {
+
+}
+/*genre.php*/
+#genreResults {
+}
+/*housekeeping for various screen sizes*/
+/* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
         [class*="col-"] {width: 100%;}
-    }
-    
+    }   
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
       /* For tablets: */
@@ -241,7 +230,6 @@ button {
           .col-s-11 {width: 91.66%;}
           .col-s-12 {width: 100%;} 
     }
-    
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
      /* For desktop: */
@@ -259,17 +247,14 @@ button {
           .col-12 {width: 100%;}
     
     } 
-    
     * {
         box-sizing: border-box;
     }
-    
     .row::after {
         content: "";
         clear: both;
         display: table;
     }
-    
     [class*="col-"] {
         float: middle;
         padding: 15px;

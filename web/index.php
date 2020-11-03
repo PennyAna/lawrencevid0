@@ -14,7 +14,7 @@ $db = get_db();
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <body>
-        <header>Lawrence Family Video Library</header>
+        <h4><a href="#">Lawrence Family Video</a></h4>
         <div class="row">
             <!--holds search by movie name field/button-->
             <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
