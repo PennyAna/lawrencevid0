@@ -197,6 +197,6 @@ $db = get_db();
             <!--bootstrap suppts all html5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color-->
             <!--labels required for screen readers to process correctly, use .sr-only to hide otherwise-->
     
-
+<script src="./lawVid.js"></script>
 </body>
 </html>
