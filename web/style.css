@@ -140,7 +140,6 @@ li {
 }
 #titleNameError0 {
     float: left;
-    display: none;
 }
 #titleInfo0 {
     background-color: var(--color-spring-bud);
@@ -148,7 +147,6 @@ li {
 }
 #titleInfoError0 {
     float: left;
-    display: none;
 }
 #genreName0 {
     float: left;
@@ -191,11 +189,9 @@ option {
 }
 #titleNameError1 {
     float: left;
-    display: none;
 }
 #titleInfoError1 {
     float: left;
-    display: none;
 }
 button {
     color: white;
@@ -217,7 +213,6 @@ button {
 .errorMsg {
     background: #f99;
     border: #900 1px solid;
-    display: none;
 }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {

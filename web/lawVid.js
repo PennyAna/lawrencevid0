@@ -34,19 +34,12 @@ function checkTitleSearch() {
 }
 function checkMovieName (title, error) {
     if (title.value == "") {
-        error.style.display = inline;
         error.innerHTML = "Did you forget to put in the name?";
-    }
-    else {
-        error.style.display = none;
     }
 }
 function checkMovieInfo(info, error) {
     if (info.value == "") {
-        error.style.display = inline;
+
         error.innerHTML = "Did you forget to put in the name?";
-    }
-    else {
-        error.style.display = none;
     }
 }
