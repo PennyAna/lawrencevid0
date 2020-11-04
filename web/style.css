@@ -83,7 +83,8 @@ a:active {
     position: relative;
 }
 .row {
-    border-top: 10px solid var(--color-royal-dark;
+    position: aboslute;
+    border-top: 10px solid var(--color-royal-dark);
     border-left: 10px solid var(--color-royal-dark);
     border-right: 10px solid var(--color-royal-dark);
     border-bottom: none;
