@@ -76,12 +76,15 @@ a:active {
 	background-color: transparent;
 	text-decoration: none;
 }
+.container-fluid {
+    margin-top: 100px;
+    position: inherit;
+}
 .row {
     border-top: 10px solid var(--color-royal-dark;
     border-left: 10px solid var(--color-royal-dark);
     border-right: 10px solid var(--color-royal-dark);
     border-bottom: none;
-    margin-top: 100px;
 }  
 fieldset {
     
