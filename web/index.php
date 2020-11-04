@@ -14,7 +14,14 @@ $db = get_db();
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <body>
-        <h4><a href="#">Lawrence Family Video</a></h4>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lawrence Family Video</a>
+            </div>
+            <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
+            <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
+        </nav>
         <div class="row">
             <!--holds search by movie name field/button-->
             <form class="form-group col-9" id="searchForm" action="search.php" method="POST">
@@ -56,11 +63,6 @@ $db = get_db();
                     </fieldset>
             </form> 
         </div>
-        <div class="row">
-            <!--button to show add new movie/show alpha forms-->
-            <input id="showNewBtn" type="button" value="Add New Movie" class="col-6 btns" onclick="location.href='insert.php'"></input>
-            <input id="showAlpha" type="button" id="showAlpha" value="Search Alphabetically" class="col-6 btns" onclick="location.href='alpha.php'"></input>
-        </div>
-    <script src="./lawVid.js"></script>
+    <!-- <script src="./lawVid.js"></script> -->
     </body>
 </html>
