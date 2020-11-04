@@ -43,6 +43,9 @@ nav {
 }
 .navbar-header {
     color: var(--color-orange-yellow);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .navbar-brand {
 
