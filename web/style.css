@@ -25,6 +25,32 @@ body {
     justify-content: center;
     align-items: center;
 }
+nav {
+
+}
+.navbar {
+    background-color: var(--color-oxford-blue);
+    color: var(--color-uran-blue);
+    width: 100%;
+}
+.navbar-default {
+
+}
+.navbar-fixed-top {
+
+}
+.container-fluid {
+
+}
+.navbar-header {
+    
+}
+.navbar-brand {
+
+}
+.navbar-btn {
+
+}
 .form-group {
     font-family: Arial, Helvetica, sans-serif;
     float: left;
@@ -49,9 +75,9 @@ a:active {
 	text-decoration: none;
 }
 .row {
-    border-top: 10px solid var(--color-orange-yellow);
-    border-left: 10px solid var(--color-orange-yellow);
-    border-right: 10px solid var(--color-orange-yellow);
+    border-top: 10px solid var(--color-royal-dark;
+    border-left: 10px solid var(--color-royal-dark);
+    border-right: 10px solid var(--color-royal-dark);
     border-bottom: none;
 }  
 fieldset {
