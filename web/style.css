@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 nav {
-    margin-bottom: 30px;
+
 }
 .navbar {
     background-color: var(--color-oxford-blue);
@@ -77,7 +77,6 @@ a:active {
 	text-decoration: none;
 }
 .container-fluid {
-    margin-top: 100px;
     position: inherit;
 }
 .row {
