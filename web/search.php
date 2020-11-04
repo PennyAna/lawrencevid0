@@ -11,7 +11,14 @@
 	<script src="./lawVid.js"></script>
 </head>
     <body>
-	<h4><a href="index.php">Lawrence Family Video Library</a></h4>
+	<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lawrence Family Video</a>
+            </div>
+            <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
+            <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
+        </nav>h4>
         <div class="row">
             <h3>Results of Title Search</h3>
             <div id="searchResults">
