@@ -89,6 +89,9 @@ a:active {
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }  
 fieldset {
     
