@@ -27,12 +27,13 @@ body {
     align-items: center;
 }
 nav {
-
+    
 }
 .navbar {
     background-color: var(--color-oxford-blue);
     color: var(--color-orange-yellow);
     width: 100%;
+    height: fit-content;
 }
 .navbar-default {
 
