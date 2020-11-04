@@ -26,6 +26,7 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 nav {
     justify-content: center;
