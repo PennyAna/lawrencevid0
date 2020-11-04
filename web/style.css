@@ -47,11 +47,13 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    max-height: 100px;
 }
 .navbar-brand {
     justify-content: center;
     align-items: center;
     text-align: center;
+    max-height: 100px;
 }
 .navbar-btn {
     color: white;
