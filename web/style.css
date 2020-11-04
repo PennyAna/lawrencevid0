@@ -81,6 +81,7 @@ a:active {
     border-left: 10px solid var(--color-royal-dark);
     border-right: 10px solid var(--color-royal-dark);
     border-bottom: none;
+    margin-top: 100px;
 }  
 fieldset {
     
