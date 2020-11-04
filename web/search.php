@@ -18,12 +18,14 @@
             </div>
             <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
             <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
-        </nav>h4>
+		</nav>
+		<div class="container-fluid">
         <div class="row">
             <h3>Results of Title Search</h3>
             <div id="searchResults">
 			<?php
 			?>
-            </div>
+			</div>
+</div>
     </body>
 </html>

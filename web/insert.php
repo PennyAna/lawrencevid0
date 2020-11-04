@@ -23,6 +23,7 @@ $db = get_db();
             <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
             <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
         </nav>
+        <div class="container-fluid">
         <div class="row">
             <form class="form-group col-9 changeMovieForm" id="newMovieForm" action="insert.php" method="POST">
                 <fieldset>
@@ -63,5 +64,6 @@ $db = get_db();
             </form> 
             <br><br>
         </div>
+</div>
     </body>
 </html>

@@ -23,6 +23,7 @@ $db = get_db();
             <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
             <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
         </nav>
+        <div class="container-fluid">
         <div class="row">
             <h3>Alphabetical Index of Movies</h3>
             <ul id="alpha0" class="alphaIndex col-9 list-group">
@@ -65,5 +66,6 @@ $db = get_db();
             ?>
             </ul> <br><br>
         </div>
+</div>
     </body>
 </html>

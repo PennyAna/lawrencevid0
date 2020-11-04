@@ -22,7 +22,8 @@ $db = get_db();
             </div>
             <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
             <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
-        </nav>
+		</nav>
+		<div class="container-fluid">
         <div class="row">
             <h3>Results of Genre Search</h3>
             <ul id="genreList" class="col-9 list-group">
@@ -32,5 +33,6 @@ $db = get_db();
             ?>
             </ul> <br><br>
 		</div>
+</div>
     </body>
 </html>
