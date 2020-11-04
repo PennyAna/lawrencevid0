@@ -20,6 +20,7 @@ html {
     width: 100%;
 }
 body {
+    padding-top: 65px;
     background-color: var(--color-uran-blue);
     color: var(--color-oxford-blue);
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
