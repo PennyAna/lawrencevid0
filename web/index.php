@@ -14,7 +14,7 @@ $db = get_db();
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
     <body>
-        <nav class="navbar navbar-fixed-top col-s-9">
+        <nav class="navbar navbar-fixed-top col-xs-12">
             <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand nav-justified" href="#">Lawrence Family Video</a>
@@ -25,7 +25,7 @@ $db = get_db();
         <div class="container-fluid">
         <div class="row">
             <!--holds search by movie name field/button-->
-            <form class="form-group col-s-9" id="searchForm" action="search.php" method="POST">
+            <form class="form-group col-xs-12" id="searchForm" action="search.php" method="POST">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
@@ -37,7 +37,7 @@ $db = get_db();
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-s-9" id="genreForm" action="genre.php" method="POST" >
+            <form class="form-group col-xs-12" id="genreForm" action="genre.php" method="POST" >
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
