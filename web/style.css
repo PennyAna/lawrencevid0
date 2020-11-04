@@ -84,10 +84,8 @@ a:active {
 }
 .row {
     position: aboslute;
-    border-top: 10px solid var(--color-royal-dark);
-    border-left: 10px solid var(--color-royal-dark);
-    border-right: 10px solid var(--color-royal-dark);
-    border-bottom: none;
+    border: 10px solid var(--color-royal-dark);
+    margin: 20px;
 }  
 fieldset {
     
