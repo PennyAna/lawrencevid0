@@ -30,6 +30,7 @@ body {
 nav {
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .navbar {
     background-color: var(--color-oxford-blue);
