@@ -31,6 +31,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    max-height: 50px;
 }
 .navbar {
     background-color: var(--color-oxford-blue);
