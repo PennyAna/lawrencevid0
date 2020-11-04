@@ -48,6 +48,7 @@ nav {
 .navbar-btn {
     color: white;
     background-color: var(--color-dark-cyan);
+    float: right;
 }
 .form-group {
     font-family: Arial, Helvetica, sans-serif;
