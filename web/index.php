@@ -17,7 +17,7 @@ $db = get_db();
         <nav class="navbar navbar-fixed-top">
             <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Lawrence Family Video</a>
+                <a class="navbar-brand nav-justified" href="#">Lawrence Family Video</a>
             </div>
             <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
             <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
