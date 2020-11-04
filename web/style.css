@@ -16,7 +16,8 @@
 /*index.php*/
 html {
 	position: relative;
-	min-height: 100%;
+    height: 100%;
+    width: 100%;
 }
 body {
     background-color: var(--color-uran-blue);
