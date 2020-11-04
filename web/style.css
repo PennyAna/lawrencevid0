@@ -251,9 +251,6 @@ button {
           .col-12 {width: 100%;}
     
     } 
-    * {
-        box-sizing: border-box;
-    }
     .row::after {
         content: "";
         clear: both;
