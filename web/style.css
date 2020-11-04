@@ -42,11 +42,8 @@ nav {
 .navbar-fixed-top {
 
 }
-.container-fluid {
-
-}
 .navbar-header {
-    
+    color: var(--color-orange-yellow);
 }
 .navbar-brand {
 
