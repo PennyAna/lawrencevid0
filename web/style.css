@@ -78,7 +78,7 @@ a:active {
 	text-decoration: none;
 }
 .container-fluid {
-    position: inherit;
+    position: relative;
 }
 .row {
     border-top: 10px solid var(--color-royal-dark;
