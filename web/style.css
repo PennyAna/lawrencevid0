@@ -245,10 +245,11 @@ button {
 .changeMovieForm {
     align-items: center;
 }
+/*
 .errorMsg {
     background-color: #f99;
     border: #900 1px solid;
-}
+}*/
 /*search.php*/
 #searchResults {
 
