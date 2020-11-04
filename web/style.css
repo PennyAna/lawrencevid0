@@ -37,23 +37,23 @@ nav {
     background-color: var(--color-oxford-blue);
     color: var(--color-orange-yellow);
     width: 100%;
-    max-height: 100px;
+    height: 100px;
 }
 .navbar-fixed-top {
-
+    height: 100px;
 }
 .navbar-header {
     color: var(--color-orange-yellow);
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-height: 100px;
+    height: 100px;
 }
 .navbar-brand {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-height: 100px;
+    height: 100px;
 }
 .navbar-btn {
     color: white;
