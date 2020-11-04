@@ -48,7 +48,9 @@ nav {
     text-align: center;
 }
 .navbar-brand {
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .navbar-btn {
     color: white;
