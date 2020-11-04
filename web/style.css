@@ -31,13 +31,13 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-height: 100px;
+    max-height: fit-content;
 }
 .navbar {
     background-color: var(--color-oxford-blue);
     color: var(--color-orange-yellow);
     width: 100%;
-    height: fit-content;
+    max-height: 100px;
 }
 .navbar-fixed-top {
 
