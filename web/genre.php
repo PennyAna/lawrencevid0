@@ -25,10 +25,12 @@ $db = get_db();
         </nav>
         <div class="row">
             <h3>Results of Genre Search</h3>
-            <div id="genreResults">
-			<?php
-			?>
-			</div>
+            <ul id="genreList" class="col-9 list-group">
+            <!--need to put 'edit' buttons next to each populated titles-->
+            <?php
+
+            ?>
+            </ul> <br><br>
 		</div>
     </body>
 </html>
