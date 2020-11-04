@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 nav {
-
+    margin-bottom: 30px;
 }
 .navbar {
     background-color: var(--color-oxford-blue);
@@ -109,12 +109,6 @@ label {
 #searchForm {
 
 }
-fieldset {
-
-} 
-legend {
-
-} 
 #searchMovieName {
     background-color: var(--color-spring-bud);
 }
