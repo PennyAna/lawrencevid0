@@ -41,7 +41,7 @@ echo "Bubbles Start";
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
@@ -81,8 +81,8 @@ echo "Bubbles Start";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
                     $searchName = $_POST['searchMovieName'];
-                    $query = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
-                    $statement = $db->prepare($query);
+                    $query1 = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
+                    $statement = $db->prepare($query1);
                     $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
@@ -92,6 +92,17 @@ echo "Bubbles Start";
                          echo $info . "\n"; 
                          echo $genre . "\n";
                     }        
+                    $statement->closeCursor();
+
+                    $query2 = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
+                    $statement = $db->prepare($query2);
+                    $statement->execute();
+                    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        $genreid = $row['genreid'];
+                        $genrename = $row['genrename'];
+                        echo $genreid . "\n";
+                        echo $genrename . "\n";      
+                    }
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
@@ -105,21 +116,7 @@ echo "Bubbles Start";
             <ul id="genreList" class="col-xs-12 list-group">
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php 
-                try {
-                    $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
-                    $statement = $db->prepare($query);
-                    $statement->execute();
-                    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $genreid = $row['genreid'];
-                        $genrename = $row['genrename'];
-                    }
-                    echo $genreid . "\n";
-                    echo $genrename . "\n";
-                }
-                catch(PDOException $ex) {
-                    echo "Error connecting to DB. Details: $ex";
-                    die();
-                }       
+                
             ?>
             </ul> <br><br>
 		</div>
