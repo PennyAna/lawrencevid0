@@ -41,7 +41,7 @@ echo "Bubbles Start";
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo $_SERVER["PHP_SELF"]?>">
+            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
