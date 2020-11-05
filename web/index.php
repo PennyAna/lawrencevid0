@@ -75,18 +75,18 @@ echo "Bubbles Start";
             <?php
                 echo "Bubbles0";
             	try {
-                    function filter_input($data) {
-                        $data = trim($data);
-                        $data = stripslashes($data);
-                        $data = htmlspecialchars($data);
-                        return $data;
-                    }
                     echo "BubblesTry1";
                     echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
                     $searchName = filter_input($_POST['searchMovieName']);
+                    function filter_input($data) {
+                        $data = trim($data);
+                        $data = stripslashes($data);
+                        $data = htmlspecialchars($data);
+                        return $data;
+                    }
                     $query = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
                     $statement = $db->prepare($query);
                     $statement->execute();
