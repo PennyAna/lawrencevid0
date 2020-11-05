@@ -29,7 +29,7 @@ echo "Bubbles0";
         <div class="container-fluid">
         <div class="row">
             <!--holds search by movie name field/button-->
-            <form class="form-group col-xs-12" id="searchForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form class="form-group col-xs-12" id="searchForm"  method="POST" action="<?php $_SERVER["PHP_SELF"]?>">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
@@ -41,7 +41,7 @@ echo "Bubbles0";
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php $_SERVER["PHP_SELF"]?>>
+            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php $_SERVER["PHP_SELF"]?>">
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
