@@ -80,7 +80,7 @@ echo "Bubbles0";
                         $data = htmlspecialchars($data);
                         return $data;
                     }
-                    // echo $_POST['searchMovieName'];
+                    echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
