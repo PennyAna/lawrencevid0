@@ -16,23 +16,18 @@ $db = get_db();
 </head>
     <body>
 	<nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
-            </div>
-            <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
-            <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
-        </nav>
+			<div class="container-fluid">
+            	<div class="navbar-header row">
+                	<a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
+				</div>
+				<div class="row">
+            		<button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
+					<button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
+				</div>
+			</div>
+    	</nav>
 		<div class="container-fluid">
-        <div class="row">
-            <h3>Results of Genre Search</h3>
-            <ul id="genreList" class="col-9 list-group">
-            <!--need to put 'edit' buttons next to each populated titles-->
-            <?php
-
-            ?>
-            </ul> <br><br>
-		</div>
+        
 </div>
     </body>
 </html>

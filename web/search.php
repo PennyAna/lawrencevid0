@@ -15,55 +15,19 @@ $db = get_db();
 	<script src="./lawVid.js"></script>
 </head>
     <body>
-	<nav class="navbar navbar-fixed-top">
-            <div class="navbar-header">
-                <a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
-            </div>
-            <button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
-            <button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
-        </nav>
-		<div class="container-fluid">
-        <div class="row">
-            <h3>Results of Title Search</h3>
-            <div id="searchResults">
-			<?php
-				if (isset($_POST['searchMovieName'])) {
-					$searchName = $_POST['searchMovieName'];
-					echo $searchName.value;
-				}
-				else { echo "post did not work";}
-				try {
-					$statement = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
-					$statement->execute();
-					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						$name = $row['titlename'];
-						$info = $row['titleinfo'];
-						$genre = $row['genreid'];
-					}
-					echo $name . "\n"; 
-					echo $info . "\n"; 
-					echo $genre . "\n"; 
-					try {
-						$statement = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
-						$statement->execute();
-						while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-							$genreid = $row['genreid'];
-							$genrename = $row['genrename'];
-						}
-						echo $genreid . "\n";
-						echo $genrename . "\n";
-					}
-					catch(PDOException $ex) {
-						echo "Error connecting to DB. Details: $ex";
-						die();
-					}
-				}
-				catch(PDOException $ex) {
-					echo "Error connecting to DB. Details: $ex";
-					die();
-				}
-			?>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">
+            	<div class="navbar-header row">
+                	<a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
+				</div>
+				<div class="row">
+            		<button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
+					<button class="btn navbar-btn" onclick="location.href='alpha.php'">Search Alphabetically</button>
+				</div>
 			</div>
-</div>
+    	</nav>
+		<div class="container-fluid">
+        
+		</div>
     </body>
 </html>
