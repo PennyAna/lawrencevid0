@@ -78,13 +78,8 @@ echo "Bubbles0";
                     $searchName = "";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
-
-				    if (isset($_POST['searchMovieName'])) {
-					    $searchName = test_input($_POST['searchMovieName']);
-					    echo $searchName.value;
+                    $searchName = test_input($_POST['searchMovieName']);
 				    }
-                    else { echo "post did not work";
-                    }
                     function test_input($data) {
                         $data = trim($data);
                         $data = stripslashes($data);
@@ -97,11 +92,12 @@ echo "Bubbles0";
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-						 $genre = $row['genreid'];
+                         $genre = $row['genreid'];
+                         echo $name . "\n"; 
+					    echo $info . "\n"; 
+                        echo $genre . "\n";
                     }                    
-					echo $name . "\n"; 
-					echo $info . "\n"; 
-                    echo $genre . "\n"; 
+					 
                   /*   try {
                         $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
                         $statement = $db->prepare($query);
