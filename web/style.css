@@ -15,7 +15,8 @@
 }
 /*index.php*/
 html {
-	position: relative;
+    position: relative;
+    vertical-align: middle;
     height: 80%;
     width: 80%;
 }

@@ -1,3 +1,7 @@
+<?php
+require("dbConnect.php");
+$db = get_db();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,41 @@
             <h3>Results of Title Search</h3>
             <div id="searchResults">
 			<?php
+				if (isset($_POST['searchMovieName'])) {
+					$searchName = $_POST['searchMovieName'];
+					echo $_POST['searchMovieName'].value;
+				}
+				else { echo "post did not work";}
+				try {
+					$query = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
+					$query->execute();
+					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+						$name = $row['titlename'];
+						$info = $row['titleinfo'];
+						$genre = $row['genreid'];
+					}
+					echo $name . "\n"; 
+					echo $info . "\n"; 
+					echo $genre . "\n"; 
+					try {
+						$query = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
+						$query->execute();
+						while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+							$genreid = $row['genreid'];
+							$genrename = $row['genrename'];
+						}
+						echo $genreid . "\n";
+						echo $genrename . "\n";
+					}
+					catch(PDOException $ex) {
+						echo "Error connecting to DB. Details: $ex";
+						die();
+					}
+				}
+				catch(PDOException $ex) {
+					echo "Error connecting to DB. Details: $ex";
+					die();
+				}
 			?>
 			</div>
 </div>
