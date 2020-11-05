@@ -94,7 +94,7 @@ echo "Bubbles Start";
                     }        
                     $statement->closeCursor();
 
-                    $query2 = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
+                    $query2 = "SELECT genreid, genrename FROM genre WHERE '$genre' = genreid";
                     $statement = $db->prepare($query2);
                     $statement->execute();
                     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
