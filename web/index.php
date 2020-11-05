@@ -29,7 +29,7 @@ echo "Bubbles Start";
         <div class="container-fluid">
         <div class="row">
             <!--holds search by movie name field/button-->
-            <form class="form-group col-xs-12" id="searchForm"  method="POST" action="<?php echo $_SERVER["PHP_SELF"]?>">
+            <form class="form-group col-xs-12" id="searchForm"  method="POST" action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"]);?>">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
@@ -80,13 +80,7 @@ echo "Bubbles Start";
                     $searchName = "";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
-                    $searchName = filter_input($_POST['searchMovieName']);
-                    function filter_input($data) {
-                        $data = trim($data);
-                        $data = stripslashes($data);
-                        $data = htmlspecialchars($data);
-                        return $data;
-                    }
+                    $searchName = $_POST['searchMovieName'];
                     $query = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
                     $statement = $db->prepare($query);
                     $statement->execute();
