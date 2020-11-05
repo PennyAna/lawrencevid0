@@ -1,7 +1,6 @@
 <?php
 require("dbConnect.php");
 $db = get_db();
-echo "Bubbles0";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +72,7 @@ echo "Bubbles0";
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
             <?php
+                echo "Bubbles0";
             	try {
                     function filter_input($data) {
                         $data = trim($data);
