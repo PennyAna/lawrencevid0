@@ -71,9 +71,9 @@ $db = get_db();
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
             <?php
-                global $searchName = "";
-                global $name = global $info = global $genre = "";
-                global $genreid = global $genrename = "";
+                $searchName = "";
+                $name = $info = $genre = "";
+                $genreid = $genrename = "";
 
                 test_input($_POST['searchMovieName']);
                 function test_input($data) {
