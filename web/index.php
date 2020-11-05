@@ -71,12 +71,19 @@ $db = get_db();
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
             <?php
-                global $searchName;
-                global $name;
-                global $info;
-                global $genre;
-                global $genreid;
-                global $genrename;
+                global $searchName = "";
+                global $name = global $info = global $genre = "";
+                global $genreid = global $genrename = "";
+
+                test_input($_POST['searchMovieName']);
+                function test_input($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                    echo "Bubbles";
+                }
+                
 				if (isset($_POST['searchMovieName'])) {
 					$searchName = $_POST['searchMovieName'];
 					echo $searchName.value;
