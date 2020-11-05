@@ -80,6 +80,7 @@ $db = get_db();
                         $data = htmlspecialchars($data);
                         return $data;
                     }
+                    echo "BubblesTry1";
                     echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
@@ -113,8 +114,9 @@ $db = get_db();
 					die();
 				}
 			?>
+            </div>
         </div>
-         <div class="row">
+        <div class="row">
             <h3>Results of Genre Search</h3>
             <ul id="genreList" class="col-xs-12 list-group">
             <!--<need to put 'edit' buttons next to each populated titles-->
