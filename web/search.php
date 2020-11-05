@@ -16,7 +16,6 @@ $db = get_db();
 </head>
     <body>
 	<nav class="navbar navbar-fixed-top">
-            <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
             </div>
@@ -30,12 +29,12 @@ $db = get_db();
 			<?php
 				if (isset($_POST['searchMovieName'])) {
 					$searchName = $_POST['searchMovieName'];
-					echo $_POST['searchMovieName'].value;
+					echo $searchName.value;
 				}
 				else { echo "post did not work";}
 				try {
-					$query = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
-					$query->execute();
+					$statement = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
+					$statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						$name = $row['titlename'];
 						$info = $row['titleinfo'];
@@ -45,8 +44,8 @@ $db = get_db();
 					echo $info . "\n"; 
 					echo $genre . "\n"; 
 					try {
-						$query = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
-						$query->execute();
+						$statement = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
+						$statement->execute();
 						while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 							$genreid = $row['genreid'];
 							$genrename = $row['genrename'];
