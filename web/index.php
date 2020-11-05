@@ -92,9 +92,9 @@ echo "Bubbles0";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genreid'];
-                        /*  echo $name . "\n"; 
+                        echo $name . "\n"; 
 					    echo $info . "\n"; 
-                        echo $genre . "\n"; */
+                        echo $genre . "\n"; 
                     }                    
                         $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
                         $statement = $db->prepare($query);
