@@ -41,7 +41,7 @@ echo "Bubbles0";
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php $_SERVER["PHP_SELF"]?>>
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
@@ -128,7 +128,7 @@ echo "Bubbles0";
      <!--    <div class="row">
             <h3>Results of Genre Search</h3>
             <ul id="genreList" class="col-xs-12 list-group">
-            <!--need to put 'edit' buttons next to each populated titles-->
+            <need to put 'edit' buttons next to each populated titles-->
            <!-- <?php
 
             ?>
