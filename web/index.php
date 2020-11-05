@@ -96,7 +96,7 @@ echo "Bubbles0";
                     echo $name . "\n"; 
                     echo $info . "\n"; 
                     echo $genre . "\n";  
-                    $statement->closeCursor();
+                   /*  $statement->closeCursor();
                     $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
                        $statement = $db->prepare($query);
                        $statement->execute();
@@ -105,7 +105,7 @@ echo "Bubbles0";
                            $genrename = $row['genrename'];
                        }
                        echo $genreid . "\n";
-                       echo $genrename . "\n";            
+                       echo $genrename . "\n";             */
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
