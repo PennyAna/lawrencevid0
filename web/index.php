@@ -34,8 +34,8 @@ echo "Bubbles0";
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <h5>Search Movie By Name</h5>
-                    <input type="text" id="searchMovieName" placeholder='Search Movie Name' onblur="checkTitleSearch()"></input>
-                    <div id="searchTitleError" class="errorMsg"></div>
+                    <input type="text" id="searchMovieName" name="searchMovieName" placeholder='Search Movie Name' onblur="checkTitleSearch()"></input>
+                    <div id="searchTitleError" class="errorMsg" name="searchTitleError"></div>
                     <input type="submit" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
             </form>   
@@ -45,24 +45,25 @@ echo "Bubbles0";
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
-                        <select id="genreSelect">
-                            <option value='0' selected>Choose Genre</option>
-                            <option value='1'>Horror</option>
-                            <option value='2'>Fantasy</option>
-                            <option value='3'>Action</option>
-                            <option value='4'>Adventure</option>
-                            <option value='5'>Comedy</option>
-                            <option value='6'>Drama</option>
-                            <option value='7'>Historical</option>
-                            <option value='8'>Mystery</option>
-                            <option value='9'>Documentary</option>
-                            <option value='10'>Romance</option>
-                            <option value='11'>Science Fiction</option>
-                            <option value='12'>Thriller</option>
-                            <option value='13'>Western</option>
-                            <option value='14'>Animation</option>
-                            <option value='15'>Kids</option>
-                            <option value='16'>Television</option>
+                        <select id="genreSelect" name="genreSelect">
+                            <option name="genre0" value='0' selected>Choose Genre</option>
+                            <option name="genre1" value='1'>Horror</option>
+                            <option name="genre2" value='2'>Fantasy</option>
+                            <option name="genre3"
+                            value='3'>Action</option>
+                            <option name="genre4" value='4'>Adventure</option>
+                            <option name="genre5" value='5'>Comedy</option>
+                            <option name="genre6" value='6'>Drama</option>
+                            <option name="genre7" value='7'>Historical</option>
+                            <option name="genre8" value='8'>Mystery</option>
+                            <option name="genre9" value='9'>Documentary</option>
+                            <option name="genre10" value='10'>Romance</option>
+                            <option name="genre11" value='11'>Science Fiction</option>
+                            <option name="genre12" value='12'>Thriller</option>
+                            <option name="genre13" value='13'>Western</option>
+                            <option name="genre14" value='14'>Animation</option>
+                            <option name="genre15" value='15'>Kids</option>
+                            <option name="genre16" value='16'>Television</option>
                         </select>
                         <input id="genreBtn" type="submit" name="genreBtn" value="Sort By Genre"></input>
                     </fieldset>
