@@ -74,18 +74,17 @@ echo "Bubbles0";
             <div id="searchResults" class="col-xs-12">
             <?php
             	try {
-                    echo $_POST['searchMovieName'];
-                    $searchName = "";
-                    $name = $info = $genre = "";
-                    $genreid = $genrename = "";
-                    $searchName = test_input($_POST['searchMovieName']);
-				    }
                     function test_input($data) {
                         $data = trim($data);
                         $data = stripslashes($data);
                         $data = htmlspecialchars($data);
                         return $data;
                     }
+                    echo $_POST['searchMovieName'];
+                    $searchName = "";
+                    $name = $info = $genre = "";
+                    $genreid = $genrename = "";
+                    $searchName = test_input($_POST['searchMovieName']);
                     $query = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
                     $statement = $db->prepare($query);
                     $statement->execute();
@@ -97,7 +96,7 @@ echo "Bubbles0";
 					    echo $info . "\n"; 
                         echo $genre . "\n";
                     }                    
-					 
+                }
                   /*   try {
                         $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
                         $statement = $db->prepare($query);
@@ -114,7 +113,6 @@ echo "Bubbles0";
 						echo "Error connecting to DB. Details: $ex";
 						die();
 					} */
-				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
 					die();
