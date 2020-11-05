@@ -113,15 +113,15 @@ echo "Bubbles0";
 				}
 			?>
         </div>
-     <!--    <div class="row">
+         <div class="row">
             <h3>Results of Genre Search</h3>
             <ul id="genreList" class="col-xs-12 list-group">
-            <need to put 'edit' buttons next to each populated titles-->
-           <!-- <?php
+            <!--<need to put 'edit' buttons next to each populated titles-->
+            <?php
 
             ?>
             </ul> <br><br>
-		</div> -->
+		</div>
     </div>
     <!-- <script src="./lawVid.js"></script> -->
     </body>
