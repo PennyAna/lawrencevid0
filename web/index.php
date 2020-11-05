@@ -1,6 +1,7 @@
 <?php
 require("dbConnect.php");
 $db = get_db();
+echo "Bubbles Start";
 ?>
 <!DOCTYPE html>
 <html lang="en">
