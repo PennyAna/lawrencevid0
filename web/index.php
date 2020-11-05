@@ -1,7 +1,7 @@
 <?php
 require("dbConnect.php");
 $db = get_db();
-echo "Bubbles";
+echo "Bubbles0";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,43 +72,47 @@ echo "Bubbles";
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
             <?php
-                $searchName = "";
-                $name = $info = $genre = "";
-                $genreid = $genrename = "";
+            	try {
+                    $searchName = "";
+                    $name = $info = $genre = "";
+                    $genreid = $genrename = "";
 
-                test_input($_POST['searchMovieName']);
-                function test_input($data) {
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                }
-                
-				if (isset($_POST['searchMovieName'])) {
-					$searchName = $_POST['searchMovieName'];
-					echo $searchName.value;
-				}
-				else { echo "post did not work";}
-				try {
-					$statement = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
-					$statement->execute();
+				    if (isset($_POST['searchMovieName'])) {
+					    $searchName = test_input($_POST['searchMovieName']);
+					    echo $searchName.value;
+				    }
+                    else { echo "post did not work";
+                    }
+                    function test_input($data) {
+                        $data = trim($data);
+                        $data = stripslashes($data);
+                        $data = htmlspecialchars($data);
+                        return $data;
+                    }
+                    $query = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
+                    $statement = $db->prepare($query);
+                    $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
 						 $genre = $row['genreid'];
-					}
+                    }
+                    $statement->closeCursor();
+                    
 					echo $name . "\n"; 
 					echo $info . "\n"; 
 					echo $genre . "\n"; 
 					try {
-						$statement = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
+                        $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
+                        $statement = $db->prepare($query);
 						$statement->execute();
 						while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						    $genreid = $row['genreid'];
 							$genrename = $row['genrename'];
-						}
+                        }
+                        $statement->closeCursor();
 						echo $genreid . "\n";
-						echo $genrename . "\n";
+                        echo $genrename . "\n";
 					}
 					catch(PDOException $ex) {
 						echo "Error connecting to DB. Details: $ex";
