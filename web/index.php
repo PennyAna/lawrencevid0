@@ -82,7 +82,6 @@ echo "Bubbles";
                     $data = stripslashes($data);
                     $data = htmlspecialchars($data);
                     return $data;
-                    echo "Bubbles";
                 }
                 
 				if (isset($_POST['searchMovieName'])) {
