@@ -88,10 +88,10 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genreid'];
-                         echo $name . "\n"; 
+                    }       
+                    echo $name . "\n"; 
                          echo $info . "\n"; 
                          echo $genre . "\n";
-                    }        
                     $statement->closeCursor();
 
                     $query2 = "SELECT genreid, genrename FROM genre WHERE '$genre' = genreid";
