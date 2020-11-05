@@ -70,19 +70,25 @@ $db = get_db();
         <div class="row">
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
-			<?php
+            <?php
+                global $searchName;
+                global $name;
+                global $info;
+                global $genre;
+                global $genreid;
+                global $genrename;
 				if (isset($_POST['searchMovieName'])) {
-					global $searchName = $_POST['searchMovieName'].value;
-					echo $searchName;
+					$searchName = $_POST['searchMovieName'];
+					echo $searchName.value;
 				}
 				else { echo "post did not work";}
 				try {
 					$statement = $db->prepare('SELECT titlename, titleinfo, genreid FROM title WHERE $searchName = titlename');
 					$statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						global $name = $row['titlename'];
-						global $info = $row['titleinfo'];
-						global $genre = $row['genreid'];
+						 $name = $row['titlename'];
+						 $info = $row['titleinfo'];
+						 $genre = $row['genreid'];
 					}
 					echo $name . "\n"; 
 					echo $info . "\n"; 
@@ -91,8 +97,8 @@ $db = get_db();
 						$statement = $db->prepare('SELECT genreid, genrename FROM genre WHERE genreid = $genre');
 						$statement->execute();
 						while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-							global $genreid = $row['genreid'];
-							global $genrename = $row['genrename'];
+						    $genreid = $row['genreid'];
+							$genrename = $row['genrename'];
 						}
 						echo $genreid . "\n";
 						echo $genrename . "\n";
