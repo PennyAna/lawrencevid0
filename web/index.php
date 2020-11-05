@@ -74,6 +74,7 @@ echo "Bubbles0";
             <div id="searchResults" class="col-xs-12">
             <?php
             	try {
+                    echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
                     $genreid = $genrename = "";
@@ -97,9 +98,7 @@ echo "Bubbles0";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
 						 $genre = $row['genreid'];
-                    }
-                    $statement->closeCursor();
-                    
+                    }                    
 					echo $name . "\n"; 
 					echo $info . "\n"; 
                     echo $genre . "\n"; 
