@@ -95,7 +95,17 @@ echo "Bubbles0";
                         echo $name . "\n"; 
 					    echo $info . "\n"; 
                         echo $genre . "\n"; 
-                    }                    
+                    }        
+                    $statement->closeCursor();
+                    $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
+                       $statement = $db->prepare($query);
+                       $statement->execute();
+                       while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                           $genreid = $row['genreid'];
+                           $genrename = $row['genrename'];
+                       }
+                       echo $genreid . "\n";
+                       echo $genrename . "\n";            
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
@@ -108,22 +118,6 @@ echo "Bubbles0";
             <ul id="genreList" class="col-xs-12 list-group">
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
-                try {
-                       $query = "SELECT genreid, genrename FROM genre WHERE genreid = '$genre'";
-                       $statement = $db->prepare($query);
-                       $statement->execute();
-                       while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                           $genreid = $row['genreid'];
-                           $genrename = $row['genrename'];
-                       }
-                       $statement->closeCursor();
-                       echo $genreid . "\n";
-                       echo $genrename . "\n";
-                    }
-                    catch(PDOException $ex) {
-                        echo "Error connecting to DB. Details: $ex";
-                        die();
-                    }
             ?>
             </ul> <br><br>
 		</div>
