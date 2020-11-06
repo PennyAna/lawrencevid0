@@ -35,12 +35,10 @@ $db = get_db();
                         <h5>Add New Movie Name</h5>
                         <input type="" id="titleName0" required placeholder="Movie Title">
                         </input>
-                        <div id="titleNameError0" class="errorMsg"></div>
                         <label for="titleInfo0" class="sr-only">Movie Description: </label>
                         <h5>Add New Movie Description</h5>
                         <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description">
                         </textarea>
-                        <div id="titleInfoError0" class="errorMsg"></div>
                         <label for="genreName0" class="sr-only">Movie Genre: </label>
                         <h5>Add New Movie Genre</h5>
                         <select id="genreName0" required>                                       <option value="" selected>Choose Genre</option>
@@ -72,9 +70,9 @@ $db = get_db();
                     <?php 
                         try {
                             echo 'Bubblesstart';
-                            echo $_POST['titlename0'];
-                            echo $_POST['titleinfo0'];
-                            echo $_POST['genreName0'];
+                            echo 'alpha' . $_POST['titlename0'];
+                            echo 'beta' . $_POST['titleinfo0'];
+                            echo 'zed' . $_POST['genreName0'];
                             $name = strtolower($_POST['titleName0']);
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
