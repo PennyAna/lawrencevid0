@@ -110,8 +110,8 @@ echo "Bubbles Start";
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-                         echo $name . "\n"; 
-                         echo $info . "\n"; 
+                         echo ucwords($name); 
+                         echo ucwords($info);
                     }       
 				}
 				catch(PDOException $ex) {
