@@ -33,15 +33,15 @@ $db = get_db();
                         <legend>New Movie</legend>
                         <label for="titleName0" class="sr-only">Movie Title: </label>
                         <h5>Add New Movie Name</h5>
-                        <input type="text" id="titleName0" required placeholder="Movie Title">
+                        <input type="text" id="titleName0" required name="titlename0" placeholder="Movie Title">
                         </input>
                         <label for="titleInfo0" class="sr-only">Movie Description: </label>
                         <h5>Add New Movie Description</h5>
-                        <textarea rows="5" cols="20" id="titleInfo0" optional placeholder="Brief Movie Description">
+                        <textarea rows="5" cols="20" id="titleInfo0" name="titleinfo0" optional placeholder="Brief Movie Description">
                         </textarea>
                         <label for="genreName0" class="sr-only">Movie Genre: </label>
                         <h5>Add New Movie Genre</h5>
-                        <select id="genreName0" required>                                       <option value="" selected>Choose Genre</option>
+                        <select id="genreName0" name="genreName0" required>                                       <option value="" selected>Choose Genre</option>
                         <option name="genre0" value='genre0' selected>Choose Genre</option>
                             <option name="horror" value='horror'>Horror</option>
                             <option name="fantasy" value='fantasy'>Fantasy</option>
