@@ -76,7 +76,8 @@ $db = get_db();
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre')";
-                            if ($db->exec($query5) == TRUE) {
+                            $db->exec($query5);
+                            if ($db->exec($query5) === TRUE) {
                                 echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                                 echo ucwords($name); 
                                 echo "</li><li class='list-group-item'>";
@@ -85,7 +86,7 @@ $db = get_db();
                                 echo ucwords($genre);
                                 echo "</li></ul>";
                             }
-                            else {
+                            else { echo "<p>Danger Will Robinson!</p>";}
                         }       
                         catch(PDOException $ex) {
                             echo "Error connecting to DB. Details: $ex";
