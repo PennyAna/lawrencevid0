@@ -77,7 +77,7 @@ $db = get_db();
                         $info = strtolower($_POST['titleInfo1']);
                         $genre = strtolower($_POST['genreName1']);
 
-                        $query4 = "UPDATE title SET titleinfo = '$info'), genre = '$genre' WHERE '$title' = titlename";
+                        $query4 = "UPDATE title SET titleinfo = '$info', genre = '$genre' WHERE '$title' = titlename";
                         $statement = $db->prepare($query4);
                         $statement->execute();
                         echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
@@ -95,6 +95,5 @@ $db = get_db();
                 ?>
             </div>  
         </div>
-</div>
     </body>
 </html>
