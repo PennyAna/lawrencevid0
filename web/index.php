@@ -46,24 +46,24 @@ echo "Bubbles Start";
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
                         <select id="genreSelect" name="genreSelect">
-                            <option name="genre0" value='0' selected>Choose Genre</option>
-                            <option name="genre1" value='1'>Horror</option>
-                            <option name="genre2" value='2'>Fantasy</option>
-                            <option name="genre3"
-                            value='3'>Action</option>
-                            <option name="genre4" value='4'>Adventure</option>
-                            <option name="genre5" value='5'>Comedy</option>
-                            <option name="genre6" value='6'>Drama</option>
-                            <option name="genre7" value='7'>Historical</option>
-                            <option name="genre8" value='8'>Mystery</option>
-                            <option name="genre9" value='9'>Documentary</option>
-                            <option name="genre10" value='10'>Romance</option>
-                            <option name="genre11" value='11'>Science Fiction</option>
-                            <option name="genre12" value='12'>Thriller</option>
-                            <option name="genre13" value='13'>Western</option>
-                            <option name="genre14" value='14'>Animation</option>
-                            <option name="genre15" value='15'>Kids</option>
-                            <option name="genre16" value='16'>Television</option>
+                            <option name="genre0" value='genre0' selected>Choose Genre</option>
+                            <option name="horror" value='horror'>Horror</option>
+                            <option name="fantasy" value='fantasy'>Fantasy</option>
+                            <option name="action"
+                            value='action'>Action</option>
+                            <option name="adventure" value='adventure'>Adventure</option>
+                            <option name="comedy" value='comedy'>Comedy</option>
+                            <option name="drama" value='drama'>Drama</option>
+                            <option name="historical" value='historical'>Historical</option>
+                            <option name="mystery" value='mystery'>Mystery</option>
+                            <option name="documentary" value='documentary'>Documentary</option>
+                            <option name="romance" value='romance'>Romance</option>
+                            <option name="science fiction" value='science fiction'>Science Fiction</option>
+                            <option name="thriller" value='thriller'>Thriller</option>
+                            <option name="western" value='western'>Western</option>
+                            <option name="animation" value='animation'>Animation</option>
+                            <option name="kids" value='kids'>Kids</option>
+                            <option name="television" value='television'>Television</option>
                         </select>
                         <input id="genreBtn" type="submit" name="genreBtn" value="Sort By Genre"></input>
                     </fieldset>
@@ -73,10 +73,7 @@ echo "Bubbles Start";
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12">
             <?php
-                echo "Bubbles0";
             	try {
-                    echo "BubblesTry1";
-                    echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
                     $searchName = $_POST['searchMovieName'];
