@@ -46,23 +46,24 @@ $db = get_db();
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <h5>Add New Movie Genre</h5>
                     <select id="genreName1" required>
-                        <option value="" selected>Choose Genre</option>
-                        <option value='1'>Horror</option>
-                        <option value='2'>Fantasy</option>
-                        <option value='3'>Action</option>
-                        <option value='4'>Adventure</option>
-                        <option value='5'>Comedy</option>
-                        <option value='6'>Drama</option>
-                        <option value='7'>Historical</option>
-                        <option value='8'>Mystery</option>
-                        <option value='9'>Documentary</option>
-                        <option value='10'>Romance</option>
-                        <option value='11'>Science Fiction</option>
-                        <option value='12'>Thriller</option>
-                        <option value='13'>Western</option>
-                        <option value='14'>Animation</option>
-                        <option value='15'>Kids</option>
-                        <option value='16'>Television</option>
+                    <option name="genre0" value='genre0' selected>Choose Genre</option>
+                            <option name="horror" value='horror'>Horror</option>
+                            <option name="fantasy" value='fantasy'>Fantasy</option>
+                            <option name="action"
+                            value='action'>Action</option>
+                            <option name="adventure" value='adventure'>Adventure</option>
+                            <option name="comedy" value='comedy'>Comedy</option>
+                            <option name="drama" value='drama'>Drama</option>
+                            <option name="historical" value='historical'>Historical</option>
+                            <option name="mystery" value='mystery'>Mystery</option>
+                            <option name="documentary" value='documentary'>Documentary</option>
+                            <option name="romance" value='romance'>Romance</option>
+                            <option name="science fiction" value='science fiction'>Science Fiction</option>
+                            <option name="thriller" value='thriller'>Thriller</option>
+                            <option name="western" value='western'>Western</option>
+                            <option name="animation" value='animation'>Animation</option>
+                            <option name="kids" value='kids'>Kids</option>
+                            <option name="television" value='television'>Television</option>
                     </select>
                     <button type="submit" id="editBtn1">Update Movie Info</button>
                     <button type="reset" id="resetBtn1">Reset Movie Info</button>
