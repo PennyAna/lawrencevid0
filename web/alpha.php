@@ -29,7 +29,7 @@ $db = get_db();
         <div class="container-fluid">
             <div class="row">
                 <h3>Alphabetical List of Movies</h3>
-                <form class="form-group" id="alphalist" name="alphalist">
+                <form class="form-group" id="alphalist" name="alphalist" action="edit.php" method="POST">
                 <?php
                     try {
                         $name = $info = $genre = "";
