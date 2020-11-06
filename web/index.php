@@ -84,9 +84,9 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
-                         echo $name . "\n"; 
-                         echo $info . "\n"; 
-                         echo $genre . "\n";
+                         echo ucwords($name); 
+                         echo ucfirst($info); 
+                         echo ucwords($genre);
                     }       
 				}
 				catch(PDOException $ex) {
