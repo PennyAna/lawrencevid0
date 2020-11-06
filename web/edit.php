@@ -35,7 +35,7 @@ $db = get_db();
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="" id="titleName1" required placeholder="Movie Title" onblur="checkEditForm()">
+                    <input type="text" id="titleName1" required placeholder="Movie Title" value="<?php echo $_POST['namelist'];?>">
                     </input>
                     <div id="titleNameError1" class="errorMsg"></div>
                     <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>

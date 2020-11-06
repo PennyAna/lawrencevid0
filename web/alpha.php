@@ -40,7 +40,7 @@ $db = get_db();
                             $name = $row['titlename'];
                             $info = $row['titleinfo'];
                             $genre = $row['genre'];
-                            echo "<input type='checkbox' id='$name' value='$name' name='namelist'> <ul id='movielist' name='movielist' class='list-group'><li class='list-group-item'>";
+                            echo "<input type='radio' id='$name' value='$name' name='namelist'> <ul id='movielist' name='movielist' class='list-group'><li class='list-group-item'>";
                             echo ucwords($name); 
                             echo "</li><li class='list-group-item'>";
                             echo ucfirst($info) . ".";
