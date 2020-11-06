@@ -33,7 +33,7 @@ $db = get_db();
                         <legend>New Movie</legend>
                         <label for="titleName0" class="sr-only">Movie Title: </label>
                         <h5>Add New Movie Name</h5>
-                        <input type="" id="titleName0" required placeholder="Movie Title">
+                        <input type="text" id="titleName0" required placeholder="Movie Title">
                         </input>
                         <label for="titleInfo0" class="sr-only">Movie Description: </label>
                         <h5>Add New Movie Description</h5>
