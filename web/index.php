@@ -86,13 +86,13 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
-                         echo "<p>";
+                         echo "<ul class='list-group'> <li class='list-group-item'>";
                          echo ucwords($name); 
-                         echo "</p><p>";
+                         echo "</li><li class='list-group-item'>";
                          echo ucfirst($info);
-                         echo ". </p><p>";
+                         echo ". </li><li class='list-group-item'>";
                          echo ucwords($genre);
-                         echo "</p>";
+                         echo "</li></ul>";
                     }       
 				}
 				catch(PDOException $ex) {
