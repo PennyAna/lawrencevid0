@@ -28,7 +28,7 @@ $db = get_db();
     	</nav>
         <div class="container-fluid">
             <div class="row">
-                <form class="form-group col-9 changeMovieForm" id="newMovieForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <form name="newMovieForm" class="form-group col-9 changeMovieForm" id="newMovieForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                     <fieldset>
                         <legend>New Movie</legend>
                         <label for="titleName0" class="sr-only">Movie Title: </label>
