@@ -100,9 +100,25 @@ echo "Bubbles Start";
             <h3>Results of Genre Search</h3>
             <ul id="genreList" class="col-xs-12 list-group">
             <!--<need to put 'edit' buttons next to each populated titles-->
-            <?php 
-                
-            ?>
+            <?php
+            	try {
+                    $name = $info = "";
+                    $genre = $_POST['genreSelect'];
+                    $query2 = "SELECT * FROM title WHERE '$genre' = genre";
+                    $statement = $db->prepare($query1);
+                    $statement->execute();
+					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+						 $name = $row['titlename'];
+						 $info = $row['titleinfo'];
+                         echo $name . "\n"; 
+                         echo $info . "\n"; 
+                    }       
+				}
+				catch(PDOException $ex) {
+					echo "Error connecting to DB. Details: $ex";
+					die();
+				}
+			?>
             </ul> <br><br>
 		</div>
     </div>
