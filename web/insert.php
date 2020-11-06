@@ -37,12 +37,12 @@ $db = get_db();
                         </input>
                         <label for="titleInfo0" class="sr-only">Movie Description: </label>
                         <h5>Add New Movie Description</h5>
-                        <textarea rows="5" cols="20" id="titleInfo0" name="titleinfo0"  placeholder="Brief Movie Description" optional>
+                        <textarea rows="5" cols="20" id="titleInfo0" name="titleinfo0"  placeholder="Brief Movie Description">
                         </textarea>
                         <label for="genreName0" class="sr-only">Movie Genre: </label>
                         <h5>Add New Movie Genre</h5>
-                        <select id="genreName0" name="genreName0" required>                                       <option value="" selected>Choose Genre</option>
-                        <option name="genre0" value='genre0' selected>Choose Genre</option>
+                        <select id="genreName0" name="genreName0">                           <option value="" selected>Choose Genre</option>
+                            <option name="genre0" value='genre0' selected>Choose Genre</option>
                             <option name="horror" value='horror'>Horror</option>
                             <option name="fantasy" value='fantasy'>Fantasy</option>
                             <option name="action"
