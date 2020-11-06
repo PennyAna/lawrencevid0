@@ -59,6 +59,7 @@ $db = get_db();
                             <option name="animation" value='animation'>Animation</option>
                             <option name="kids" value='kids'>Kids</option>
                             <option name="television" value='television'>Television</option>
+                            <option name="musical" value="musical">Musical</option>
                         </select>
                         <button type="submit" id="addBtn0" name="addBtn0">Add New Movie</button>
                         <button type="reset" id="resetBtn0">Reset Movie Info</button>
@@ -69,16 +70,9 @@ $db = get_db();
                     <?php 
                         if (isset($_POST['titleName0']) && $_POST['titleName0'] != "") {
                         try {
-                            echo 'Bubblesstart';
-                            echo 'alpha' . $_POST['titleName0'];
-                            echo 'beta' . $_POST['titleInfo0'];
-                            echo 'zed' . $_POST['genreName0'];
                             $name = strtolower($_POST['titleName0']);
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
-                            echo 'alpha' . $title;
-                            echo 'beta' . $info;
-                            echo 'zed' . $genre;
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre')";
                             if ($db->exec($query5)) {
                                 echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
