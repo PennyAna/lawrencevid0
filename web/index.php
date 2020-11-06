@@ -84,16 +84,22 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
+                         echo "<p>"
                          echo ucwords($name); 
-                         echo ucfirst($info); 
+                         echo "</p>";
+                         echo "<p>";
+                         echo ucfirst($info) . ".";
+                         echo "</p>"; 
+                         echo "<p>";
                          echo ucwords($genre);
+                         echo "</p>";
                     }       
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
 					die();
 				}
-			?>
+            ?>
             </div>
         </div>
         <div class="row">
@@ -110,8 +116,13 @@ echo "Bubbles Start";
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
+                         echo "<ul class='list-group'>";
+                         echo "<li class='list-group-item'>";
                          echo ucwords($name); 
+                         echo "</li>";
+                         echo "<li class='list-group-item'>";
                          echo ucfirst($info) . ".";
+                         echo "</li> </ul>";
                     }       
 				}
 				catch(PDOException $ex) {
