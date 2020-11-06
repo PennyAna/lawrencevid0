@@ -46,7 +46,7 @@ $db = get_db();
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <h5>Add New Movie Genre</h5>
                     <select id="genreName1" required>
-                        <option value="" placeholder="Choose Genre" selected></option>
+                        <option value="" selected>Choose Genre</option>
                         <option value='1'>Horror</option>
                         <option value='2'>Fantasy</option>
                         <option value='3'>Action</option>
