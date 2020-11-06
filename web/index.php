@@ -105,7 +105,7 @@ echo "Bubbles Start";
                     $name = $info = "";
                     $genre = $_POST['genreSelect'];
                     $query2 = "SELECT * FROM title WHERE '$genre' = genre;
-                    $statement = $db->prepare($query1);
+                    $statement = $db->prepare($query2);
                     $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
