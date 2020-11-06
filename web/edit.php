@@ -73,13 +73,13 @@ $db = get_db();
                 <?php 
                     try {
                         $name = $info = $genre = "";
-                        $name = $_POST['titleName1'];
-                        $info = $_POST['titleInfo1'];
-                        $genre = $_POST['genreName1'];
+                        $name = strtolower($_POST['titleName1']);
+                        $info = strtolower($_POST['titleInfo1']);
+                        $genre = strtolower($_POST['genreName1']);
 
-                        $query4 = "UPDATE title SET titleinfo = LOWER('$info'), genre = LOWER('$genre') WHERE LOWER('$title') = titlename";
+                        $query4 = "UPDATE title SET titleinfo = '$info'), genre = '$genre' WHERE '$title' = titlename";
                         $statement = $db->prepare($query4);
-                        $statement->exec();
+                        $statement->execute();
                         echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                         echo ucwords($name); 
                          echo "</li><li class='list-group-item'>";

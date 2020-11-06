@@ -72,9 +72,9 @@ $db = get_db();
                     <?php 
                         try {
                             $name = $info = $genre = "";
-                            $name = LOWER($_POST['titleName0']);
-                            $info = LOWER($_POST['titleInfo0']);
-                            $genre = LOWER($_POST['genreName0']);
+                            $name = strtolower($_POST['titleName0']);
+                            $info = strtolower($_POST['titleInfo0']);
+                            $genre = strtolower($_POST['genreName0']);
                             $query4 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre');
                             $statement = $db->prepare($query4);
                             $statement->exec();
