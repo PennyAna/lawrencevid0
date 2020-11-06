@@ -79,15 +79,14 @@ echo "Bubbles Start";
                     echo $_POST['searchMovieName'];
                     $searchName = "";
                     $name = $info = $genre = "";
-                    $genreid = $genrename = "";
                     $searchName = $_POST['searchMovieName'];
-                    $query1 = "SELECT titlename, titleinfo, genreid FROM title WHERE '$searchName' = titlename";
+                    $query1 = "SELECT titlename, titleinfo, genre FROM title WHERE '$searchName' = titlename";
                     $statement = $db->prepare($query1);
                     $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-                         $genre = $row['genreid'];
+                         $genre = $row['genre'];
                          echo $name . "\n"; 
                          echo $info . "\n"; 
                          echo $genre . "\n";
