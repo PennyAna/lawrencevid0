@@ -72,6 +72,9 @@ $db = get_db();
                     <?php 
                         try {
                             echo 'Bubblesstart';
+                            echo $_POST['titlename0'];
+                            echo $_POST['titleinfo0'];
+                            echo $_POST['genreName0'];
                             $name = strtolower($_POST['titleName0']);
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
