@@ -111,7 +111,7 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          echo ucwords($name); 
-                         echo ucwords($info);
+                         echo ucfirst($info) . ".";
                     }       
 				}
 				catch(PDOException $ex) {
