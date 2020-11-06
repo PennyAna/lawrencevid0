@@ -54,6 +54,7 @@ $db = get_db();
                         die();
                     }
                 ?>
+                <input type="submit" id="sendToEdit" name="sendToEdit"></input>
                 </form>
             </div>
         </div>
