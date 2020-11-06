@@ -29,7 +29,7 @@ $db = get_db();
         <div class="container-fluid">
             <div class="row">
                 <h3>Alphabetical List of Movies</h3>
-                <ul class='list-group' id='alphalist' name='alphalist'>
+                <form class="form-group" id="alphalist" name="alphalist">
                 <?php
                     try {
                         $name = $info = $genre = "";
@@ -40,13 +40,13 @@ $db = get_db();
                             $name = $row['titlename'];
                             $info = $row['titleinfo'];
                             $genre = $row['genre'];
-                            echo "<li class='list-group-item'>";
+                            echo "<input type='checkbox' id='$name' value='$name' name='namelist'> <ul id='movielist' name='movielist' class='list-group'><li class='list-group-item'>";
                             echo ucwords($name); 
                             echo "</li><li class='list-group-item'>";
                             echo ucfirst($info) . ".";
                             echo "</li> <li class='list-group-item'>";
                             echo ucfirst($genre);
-                            echo "</li><input type='submit' id='editBtn' onclick='editMovie('$titlename')'>";
+                            echo "</li></ul>";
                         }    
                     }
                     catch(PDOException $ex) {
@@ -54,7 +54,7 @@ $db = get_db();
                         die();
                     }
                 ?>
-                </ul> 
+                </form>
             </div>
         </div>
     </body>
