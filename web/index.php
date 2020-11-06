@@ -86,11 +86,9 @@ echo "Bubbles Start";
                          $genre = $row['genre'];
                          echo "<p>"
                          echo ucwords($name); 
-                         echo "</p>";
-                         echo "<p>";
+                         echo "</p><p>";
                          echo ucfirst($info) . ".";
-                         echo "</p>"; 
-                         echo "<p>";
+                         echo "</p><p>";
                          echo ucwords($genre);
                          echo "</p>";
                     }       
@@ -116,11 +114,9 @@ echo "Bubbles Start";
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-                         echo "<ul class='list-group'>";
-                         echo "<li class='list-group-item'>";
+                         echo "<ul class='list-group'><li class='list-group-item'>";
                          echo ucwords($name); 
-                         echo "</li>";
-                         echo "<li class='list-group-item'>";
+                         echo "</li><li class='list-group-item'>";
                          echo ucfirst($info) . ".";
                          echo "</li> </ul>";
                     }       
