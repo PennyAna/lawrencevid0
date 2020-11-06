@@ -70,3 +70,50 @@ $db = get_db();
 </div>
     </body>
 </html>
+<?php
+            	try {
+                    $searchName = "";
+                    $name = $info = $genre = "";
+                    $searchName = $_POST['searchMovieName'];
+                    $query1 = "SELECT titlename, titleinfo, genre FROM title WHERE '$searchName' = titlename";
+                    $statement = $db->prepare($query1);
+                    $statement->execute();
+					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+						 $name = $row['titlename'];
+						 $info = $row['titleinfo'];
+                         $genre = $row['genre'];
+                         echo "<ul class='list-group'> <li class='list-group-item'>";
+                         echo ucwords($name); 
+                         echo "</li><li class='list-group-item'>";
+                         echo ucfirst($info);
+                         echo ". </li><li class='list-group-item'>";
+                         echo ucwords($genre);
+                         echo "</li></ul>";
+                    }       
+				}
+				catch(PDOException $ex) {
+					echo "Error connecting to DB. Details: $ex";
+					die();
+				}
+            ?> <?php
+            try {
+                 $name = $info = "";
+                $genre = $_POST['genreSelect'];
+                $query2 = "SELECT * FROM title WHERE '$genre' = genre";
+                $statement = $db->prepare($query2);
+                $statement->execute();
+                while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                     $name = $row['titlename'];
+                     $info = $row['titleinfo'];
+                     echo "<ul class='list-group'><li class='list-group-item'>";
+                     echo ucwords($name); 
+                     echo "</li><li class='list-group-item'>";
+                     echo ucfirst($info) . ".";
+                     echo "</li> </ul>";
+                }       
+            }
+            catch(PDOException $ex) {
+                echo "Error connecting to DB. Details: $ex";
+                die();
+            }
+        ?>
