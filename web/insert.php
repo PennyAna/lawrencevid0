@@ -61,7 +61,7 @@ $db = get_db();
                             <option name="kids" value='kids'>Kids</option>
                             <option name="television" value='television'>Television</option>
                         </select>
-                        <button type="submit" id="addBtn0">Add New Movie</button>
+                        <button type="submit" id="addBtn0" name="addBtn0">Add New Movie</button>
                         <button type="reset" id="resetBtn0">Reset Movie Info</button>
                     </fieldset> 
                 </form> 
