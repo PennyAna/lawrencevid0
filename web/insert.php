@@ -76,8 +76,7 @@ $db = get_db();
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre');
-                            $statement = $db->prepare($query5);
-                            $statement->exec();
+                            db->query(query5);
                             echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                             echo ucwords($name); 
                             echo "</li><li
