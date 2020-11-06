@@ -30,7 +30,7 @@ $db = get_db();
     	</nav>
         <div class="container-fluid">
          <div class="row">
-            <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="edit.php" method="POST">
+            <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1" class="sr-only">Movie Title: </label>
@@ -68,6 +68,32 @@ $db = get_db();
                     <button type="reset" id="resetBtn1">Reset Movie Info</button>
                 </fieldset>
             </form> <br><br>
+            <div id="editResults" name="editResults">
+                <?php 
+                    try {
+                        $name = $info = $genre = "";
+                        $name = $_POST['titleName1'];
+                        $info = $_POST['titleInfo1'];
+                        $genre = $_POST['genreName1'];
+
+                        $query4 = "UPDATE title SET titleinfo = '$info', genre = '$genre' WHERE '$title' = titlename";
+                        $statement = $db->prepare($query4);
+                        $statement->exec();
+                        echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
+                        echo ucwords($name); 
+                         echo "</li><li class='list-group-item'>";
+                         echo ucfirst($info);
+                         echo ". </li><li class='list-group-item'>";
+                         echo ucwords($genre);
+                         echo "</li></ul>";
+                        }       
+                    }
+                    catch(PDOException $ex) {
+                        echo "Error connecting to DB. Details: $ex";
+                        die();
+                    }
+                ?>
+            </div>  
         </div>
 </div>
     </body>
