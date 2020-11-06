@@ -39,13 +39,14 @@ $db = get_db();
                         while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                             $name = $row['titlename'];
                             $info = $row['titleinfo'];
+                            $genre = $row['genre'];
                             echo "<li class='list-group-item'>";
                             echo ucwords($name); 
                             echo "</li><li class='list-group-item'>";
                             echo ucfirst($info) . ".";
                             echo "</li> <li class='list-group-item'>";
                             echo ucfirst($genre);
-                            echo "</li>";                  
+                            echo "</li><input type='submit' id='editBtn' onclick='editMovie('$titlename')'>";
                         }    
                     }
                     catch(PDOException $ex) {
