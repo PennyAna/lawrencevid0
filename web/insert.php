@@ -79,7 +79,7 @@ $db = get_db();
                             echo 'beta' . $info;
                             echo 'zed' . $genre;
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre')";
-                            $db->exec($query5);
+                            if ($db->exec($query5)) {
                                 echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                                 echo ucwords($name); 
                                 echo "</li><li class='list-group-item'>";
@@ -87,6 +87,7 @@ $db = get_db();
                                 echo ". </li><li class='list-group-item'>";
                                 echo ucwords($genre);
                                 echo "</li></ul>";
+                            }
                         }       
                         catch(PDOException $ex) {
                             echo "Error connecting to DB. Details: $ex";
