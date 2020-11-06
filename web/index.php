@@ -74,6 +74,7 @@ echo "Bubbles Start";
             <div id="searchResults" class="col-xs-12">
             <?php
             	try {
+                    echo "bubblessearch1";
                     $searchName = "";
                     $name = $info = $genre = "";
                     $searchName = $_POST['searchMovieName'];
@@ -81,6 +82,7 @@ echo "Bubbles Start";
                     $statement = $db->prepare($query1);
                     $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        echo "bubblessearch2";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
@@ -106,12 +108,14 @@ echo "Bubbles Start";
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
             	try {
+                    echo "bubblesgenre1";
                     $name = $info = "";
                     $genre = $_POST['genreSelect'];
                     $query2 = "SELECT * FROM title WHERE '$genre' = genre";
                     $statement = $db->prepare($query2);
                     $statement->execute();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                        echo "bubblesgenre2";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          echo "<ul class='list-group'><li class='list-group-item'>";
