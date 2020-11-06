@@ -1,7 +1,3 @@
-<?php
-require("dbConnect.php");
-$db = get_db();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +62,9 @@ $db = get_db();
                 </form> 
                 <br><br>
                 <div id="newMovieResults" name="newMovieResults">
-                    <?php 
+                    <?php
+                    require("dbConnect.php");
+                    $db = get_db();
                         try {
                             echo 'Bubblesstart';
                             echo 'alpha' . $_POST['titleName0'];
