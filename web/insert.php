@@ -72,10 +72,10 @@ $db = get_db();
                     <?php 
                         try {
                             $name = $info = $genre = "";
-                            $name = $_POST['titleName0'];
-                            $info = $_POST['titleInfo0'];
-                            $genre = $_POST['genreName0'];
-                            $query4 = "INSERT INTO title (titlename, titleinfo, genre) VALUES (LOWER('$name'), LOWER('$info'), LOWER('$genre'));
+                            $name = LOWER($_POST['titleName0']);
+                            $info = LOWER($_POST['titleInfo0']);
+                            $genre = LOWER($_POST['genreName0']);
+                            $query4 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre');
                             $statement = $db->prepare($query4);
                             $statement->exec();
                             echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
