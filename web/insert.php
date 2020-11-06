@@ -1,3 +1,7 @@
+<?php
+require("dbConnect.php");
+$db = get_db();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,9 +66,8 @@
                 </form> 
                 <br><br>
                 <div id="newMovieResults" name="newMovieResults">
-                    <?php
-                    require("dbConnect.php");
-                    $db = get_db();
+                    <?php 
+                        if (isset($_POST['titleName0']) && $_POST['titleName0'] != "") {
                         try {
                             echo 'Bubblesstart';
                             echo 'alpha' . $_POST['titleName0'];
@@ -91,6 +94,7 @@
                             echo "Error connecting to DB. Details: $ex";
                             die();
                         }
+                    }
                     ?>
                 </div>
             </div>
