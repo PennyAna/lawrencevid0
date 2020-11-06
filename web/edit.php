@@ -72,7 +72,6 @@ $db = get_db();
             <div id="editResults" name="editResults">
                 <?php 
                     try {
-                        $name = $info = $genre = "";
                         $name = strtolower($_POST['titleName1']);
                         $info = strtolower($_POST['titleInfo1']);
                         $genre = strtolower($_POST['genreName1']);
@@ -82,12 +81,12 @@ $db = get_db();
                         $statement->execute();
                         echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                         echo ucwords($name); 
-                         echo "</li><li class='list-group-item'>";
-                         echo ucfirst($info);
-                         echo ". </li><li class='list-group-item'>";
-                         echo ucwords($genre);
-                         echo "</li></ul>";
-                        }       
+                        echo "</li><li class='list-group-item'>";
+                        echo ucfirst($info);
+                        echo ". </li><li class='list-group-item'>";
+                        echo ucwords($genre);
+                        echo "</li></ul>";
+                    }       
                     catch(PDOException $ex) {
                         echo "Error connecting to DB. Details: $ex";
                         die();
