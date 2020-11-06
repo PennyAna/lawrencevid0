@@ -32,9 +32,8 @@ $db = get_db();
                 <ul class='list-group' id='alphalist' name='alphalist'>
                 <?php
                     try {
-                        echo "";
                         $name = $info = $genre = "";
-                        $query3 = "SELECT * FROM title ORDER BY titlename ASC;"
+                        $query3 = "SELECT * FROM title ORDER BY titlename ASC";
                         $statement = $db->prepare($query3);
                         $statement->execute();
                         while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
