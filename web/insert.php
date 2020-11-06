@@ -71,6 +71,7 @@ $db = get_db();
                 <div id="newMovieResults" name="newMovieResults">
                     <?php 
                         try {
+                            echo 'Bubblesstart';
                             $name = strtolower($_POST['titleName0']);
                             $info = strtolower($_POST['titleInfo0']);
                             $genre = strtolower($_POST['genreName0']);
