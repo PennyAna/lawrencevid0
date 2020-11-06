@@ -40,7 +40,7 @@ $db = get_db();
                     <div id="titleNameError1" class="errorMsg"></div>
                     <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description" onblur="checkEditForm()">
+                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description">
                     </textarea>
                     <div id="titleInfoError1" class="errorMsg"></div>
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
@@ -87,7 +87,6 @@ $db = get_db();
                          echo ucwords($genre);
                          echo "</li></ul>";
                         }       
-                    }
                     catch(PDOException $ex) {
                         echo "Error connecting to DB. Details: $ex";
                         die();
