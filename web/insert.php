@@ -33,11 +33,11 @@ $db = get_db();
                         <legend>New Movie</legend>
                         <label for="titleName0" class="sr-only">Movie Title: </label>
                         <h5>Add New Movie Name</h5>
-                        <input type="text" id="titleName0"  name="titlename0" placeholder="Movie Title"required>
+                        <input type="text" id="titleName0"  name="titleName0" placeholder="Movie Title"required>
                         </input>
                         <label for="titleInfo0" class="sr-only">Movie Description: </label>
                         <h5>Add New Movie Description</h5>
-                        <textarea rows="5" cols="20" id="titleInfo0" name="titleinfo0"  placeholder="Brief Movie Description">
+                        <textarea rows="5" cols="20" id="titleInfo0" name="titleInfo0"  placeholder="Brief Movie Description">
                         </textarea>
                         <label for="genreName0" class="sr-only">Movie Genre: </label>
                         <h5>Add New Movie Genre</h5>
@@ -70,8 +70,8 @@ $db = get_db();
                     <?php 
                         try {
                             echo 'Bubblesstart';
-                            echo 'alpha' . $_POST['titlename0'];
-                            echo 'beta' . $_POST['titleinfo0'];
+                            echo 'alpha' . $_POST['titleName0'];
+                            echo 'beta' . $_POST['titleInfo0'];
                             echo 'zed' . $_POST['genreName0'];
                             $name = strtolower($_POST['titleName0']);
                             $info = strtolower($_POST['titleInfo0']);
