@@ -88,20 +88,10 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genreid'];
-                    }       
-                        echo $name . "\n"; 
+                         echo $name . "\n"; 
                          echo $info . "\n"; 
                          echo $genre . "\n";
-
-                    $query2 = "SELECT genreid, genrename FROM genre
-                    $statement = $db->prepare($query2);
-                    $statement->execute();
-                    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                        $genreid = $row['genreid'];
-                        $genrename = $row['genrename'];
-                        echo $genreid . "\n";
-                        echo $genrename . "\n";      
-                    }
+                    }       
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
