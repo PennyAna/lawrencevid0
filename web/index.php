@@ -86,11 +86,11 @@ echo "Bubbles Start";
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
-                         echo "<p>"
+                         echo "<p>";
                          echo ucwords($name); 
                          echo "</p><p>";
-                         echo ucfirst($info) . ".";
-                         echo "</p><p>";
+                         echo ucfirst($info);
+                         echo ". </p><p>";
                          echo ucwords($genre);
                          echo "</p>";
                     }       
