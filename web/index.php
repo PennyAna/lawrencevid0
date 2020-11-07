@@ -124,7 +124,8 @@ $db = get_db();
                          echo "</td><td>";
                          echo ucfirst($info);
                          echo "</td></tr></tbody></table>";
-				}
+                    }
+                }
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
 					die();
