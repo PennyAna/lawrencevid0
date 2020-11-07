@@ -136,9 +136,9 @@ $db = get_db();
         const titleBtn = document.getElementById('searchBtn');
         titleBtn.addEventListener("click",  function() {
             const titleBtn = document.getElementById('searchBtn');
-            if (titleBtn.clicked == true) {
             const titleResults = document.getElementById('searchTitleResults');
-            titleResults.classList.toggle("visible");
+            if (titleBtn.clicked == true) {
+                titleResults.classList.toggle("visible");
             }
             else {
                 titleResults.classList.toggle("hidden");
@@ -147,9 +147,9 @@ $db = get_db();
         const genreBtn = document.getElementById('genreBtn');
         genreBtn.addEventListener("click", function() {
             const genreBtn = document.getElementById('genreBtn');
-            if (genreBtn.clicked == true) {
             const genreResults = document.getElementById('searchGenreResults');
-            genreResults.classList.toggle("visible");
+            if (genreBtn.clicked == true) {
+                genreResults.classList.toggle("visible");
             }
             else {
                 genreResults.classList.toggle("hidden");
