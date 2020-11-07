@@ -133,12 +133,13 @@ $db = get_db();
 		</div>
     </div>
     <script>
-         const titleBtn = document.getElementById('searchBtn');
-         titleBtn.addEventListener("click", makeTitleVisible);
+        const titleBtn = document.getElementById('searchBtn');
+        titleBtn.addEventListener("click", makeTitleVisible);
         const genreBtn = document.getElementById('genreBtn');
         genreBtn.addEventListener("click", makeGenreVisible);
    
         function makeTitleVisible () {
+            const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
             if (titleBtn.clicked == true) {
                 titleResults.classList.add("visible");
@@ -148,6 +149,7 @@ $db = get_db();
             }
         }
         function makeGenreVisible () {
+            const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults')
             if (genreBtn.clicked == true) {
                 genreResults.classList.add("visible");
