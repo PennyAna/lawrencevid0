@@ -33,7 +33,7 @@ $db = get_db();
                     <legend><h3>Search</h3></legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <h5>Search Movie By Name</h5>
-                    <input type="text" id="searchMovieName" name="searchMovieName" placeholder='Search Movie Name' onblur="checkTitleSearch()"></input>
+                    <input type="text" id="searchMovieName" name="searchMovieName" placeholder='Search Movie Name'></input>
                     <div id="searchTitleError" class="errorMsg" name="searchTitleError"></div>
                     <input type="submit" class="btn" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
