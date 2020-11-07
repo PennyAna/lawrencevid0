@@ -17,7 +17,7 @@ $db = get_db();
     <nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
             	<div class="navbar-header row">
-                	<a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
+                	<a href="index.php" class="navbar-brand nav-justified" >Lawrence Family Video</a>
 				</div>
 				<div class="row">
             		<button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
@@ -28,7 +28,7 @@ $db = get_db();
         <div class="container-fluid">
         <div class="row">
             <!--holds search by movie name field/button-->
-            <form class="form-group col-xs-12" id="searchForm"  method="POST" action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"]);?>">
+            <form class="form-group col-xs-12 col-6" id="searchForm"  method="POST" action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"]);?>">
                 <fieldset>
                     <legend>Search</legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
@@ -40,7 +40,7 @@ $db = get_db();
             </form>   
         </div>
         <div class="row">
-            <form class="form-group col-xs-12" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+            <form class="form-group col-xs-12 col-6" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                     <fieldset>
                         <legend>Genre</legend>
                         <h5>Search By Genre</h5>
@@ -63,6 +63,7 @@ $db = get_db();
                             <option name="animation" value='animation'>Animation</option>
                             <option name="kids" value='kids'>Kids</option>
                             <option name="television" value='television'>Television</option>
+                            <option name="musical" value="musical">Musical</option>
                         </select>
                         <input id="genreBtn" class="btn" type="submit" name="genreBtn" value="Sort By Genre"></input>
                     </fieldset>
@@ -70,7 +71,7 @@ $db = get_db();
         </div>
         <div class="row">
             <h3>Results of Title Search</h3>
-            <div id="searchResults" class="col-xs-12">
+            <div id="searchResults" class="col-xs-12 col-6">
             <?php
             	try {
                     $searchName = "";
@@ -83,13 +84,15 @@ $db = get_db();
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
                          $genre = $row['genre'];
-                         echo "<ul class='list-group'> <li class='list-group-item'>";
+                         echo "<div class='table-responsive'> <table class='table'>";
+                         echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                         echo "<tbody><tr><td>";
                          echo ucwords($name); 
-                         echo "</li><li class='list-group-item'>";
+                         echo "</td><td>";
                          echo ucfirst($info);
-                         echo ". </li><li class='list-group-item'>";
+                         echo "</td><td>";
                          echo ucwords($genre);
-                         echo "</li></ul>";
+                         echo "</td></tr></tbody></table></div>";
                     }       
 				}
 				catch(PDOException $ex) {
@@ -101,11 +104,11 @@ $db = get_db();
         </div>
         <div class="row">
             <h3>Results of Genre Search</h3>
-            <ul id="genreList" class="col-xs-12 list-group">
+            <ul id="genreList" class="col-xs-12 col-6 list-group">
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
             	try {
-                     $name = $info = "";
+                    $name = $info = "";
                     $genre = $_POST['genreSelect'];
                     $query2 = "SELECT * FROM title WHERE '$genre' = genre";
                     $statement = $db->prepare($query2);
@@ -113,12 +116,13 @@ $db = get_db();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-                         echo "<ul class='list-group'><li class='list-group-item'>";
+                         echo "<div class='table-responsive'> <table class='table'>";
+                         echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                         echo "<tbody><tr><td>";
                          echo ucwords($name); 
-                         echo "</li><li class='list-group-item'>";
-                         echo ucfirst($info) . ".";
-                         echo "</li> </ul>";
-                    }       
+                         echo "</td><td>";
+                         echo ucfirst($info);
+                         echo "</td></tr></tbody></table></div>";
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";

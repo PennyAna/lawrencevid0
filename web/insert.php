@@ -18,7 +18,7 @@ $db = get_db();
     <nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
             	<div class="navbar-header row">
-                	<a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
+                	<a href="index.php" class="navbar-brand nav-justified">Lawrence Family Video</a>
 				</div>
 				<div class="row">
             		<button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
@@ -75,13 +75,14 @@ $db = get_db();
                             $genre = strtolower($_POST['genreName0']);
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre')";
                             if ($db->exec($query5)) {
-                                echo "<p> '$name' was added successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
+                                echo "<p> '$name' was added successfully! </p>";
+                                echo "<div class='table-responsive'> <table class='table'>";
+                                echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                                echo "<tbody><tr><td>";
                                 echo ucwords($name); 
-                                echo "</li><li class='list-group-item'>";
+                                echo "</td><td>";
                                 echo ucfirst($info);
-                                echo ". </li><li class='list-group-item'>";
-                                echo ucwords($genre);
-                                echo "</li></ul>";
+                                echo "</td></tr></tbody></table></div>";
                             }
                         }       
                         catch(PDOException $ex) {

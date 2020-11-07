@@ -18,7 +18,7 @@ $db = get_db();
     <nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
             	<div class="navbar-header row">
-                	<a class="navbar-brand nav-justified" href="index.php">Lawrence Family Video</a>
+                	<a href="index.php" class="navbar-brand nav-justified">Lawrence Family Video</a>
 				</div>
 				<div class="row">
             		<button class="btn navbar-btn" onclick="location.href='insert.php'">Add New Movie</button>
@@ -40,13 +40,16 @@ $db = get_db();
                             $name = $row['titlename'];
                             $info = $row['titleinfo'];
                             $genre = $row['genre'];
-                            echo "<input type='radio' id='$name' value='$name' name='namelist'> <ul id='movielist' name='movielist' class='list-group'><li class='list-group-item'>";
+                            echo "<div class='table-responsive'> <table class='table'>";
+                            echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                            echo "<tbody><tr><td>";
+                            echo "<input type='radio' id='$name' value='$name' name='namelist'></td><td>" 
                             echo ucwords($name); 
-                            echo "</li><li class='list-group-item'>";
-                            echo ucfirst($info) . ".";
-                            echo "</li> <li class='list-group-item'>";
-                            echo ucfirst($genre);
-                            echo "</li></ul>";
+                            echo "</td><td>";
+                            echo ucfirst($info);
+                            echo "</td><td>";
+                            echo ucwords($genre);
+                            echo "</td></tr></tbody></table></div>";
                         }    
                     }
                     catch(PDOException $ex) {
