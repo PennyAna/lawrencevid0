@@ -39,7 +39,7 @@ $db = get_db();
                 </fieldset>
             </form>   
             
-            <div id="searchTitleResults" name="searchTitleResults" class="col-xs-12 col-6">
+            <div id="searchTitleResults" name="searchTitleResults" class="col-xs-12 col-6 hidden">
             <h3>Results of Title Search</h3>
             <?php
             	try {
@@ -101,7 +101,7 @@ $db = get_db();
                     </fieldset>
             </form> 
            
-            <div id="searchGenreResults" name="searchMovieResults" class="table-responsive"> 
+            <div id="searchGenreResults" name="searchMovieResults" class="col-xs-12 col-6 table-responsive hidden"> 
             <h3>Results of Genre Search</h3>
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
@@ -132,5 +132,17 @@ $db = get_db();
             </div>
 		</div>
     </div>
+    <script>
+        const titleResults = document.getElementById('searchTitleResults');
+        const genreResults = document.getElementById('searchGenreResults');
+        const titleBtn = document.getElementById('searchBtn');
+        const genreBtn = document.getElementById('genreBtn');
+        if (titleBtn.clicked == true) {
+            titleResults.classList.add("visible");
+        }
+        if (genreBtn.clicked == true) {
+            genreResults.classList.add("visible");
+        }
+    </script>
     </body>
 </html>

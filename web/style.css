@@ -158,6 +158,12 @@ li {
     border: solid 5px var(--color-royal-light);
     background-color: var(--color-orange-yellow);
 }
+.hidden {
+    visibility: hidden;
+}
+.visible {
+    visibility: visible;
+}
 /*alpha.php*/
 #sendToEdit {
 
