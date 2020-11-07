@@ -148,7 +148,7 @@ $db = get_db();
         function makeGenreVisible () {
             console.log("BubblesGenreVis");
             const genreBtn = document.getElementById('genreBtn');
-            const genreResults = document.getElementById('searchGenreResults')
+            const genreResults = document.getElementById('searchGenreResults');
                 console.log("BubblesGenreChange");
                 genreResults.classList.toggle("visible");
         }
