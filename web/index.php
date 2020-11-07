@@ -143,14 +143,14 @@ $db = get_db();
             const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
                 console.log("BubblesTitleChange");
-                titleResults.classList.add("visible");
+                titleResults.classList.toggle("visible");
         }
         function makeGenreVisible () {
             console.log("BubblesGenreVis");
             const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults')
                 console.log("BubblesGenreChange");
-                genreResults.classList.add("visible");
+                genreResults.classList.toggle("visible");
         }
     </script>
     </body>
