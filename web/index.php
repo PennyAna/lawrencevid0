@@ -139,6 +139,7 @@ $db = get_db();
         genreBtn.addEventListener("click", makeGenreVisible);
    
         function makeTitleVisible () {
+            console.log("BubblesTitleVis");
             const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
             if (titleBtn.clicked == true) {
@@ -149,6 +150,7 @@ $db = get_db();
             }
         }
         function makeGenreVisible () {
+            console.log("BubblesGenreVis");
             const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults')
             if (genreBtn.clicked == true) {
