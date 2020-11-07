@@ -140,9 +140,6 @@ $db = get_db();
             if (titleBtn.clicked == true) {
                 titleResults.classList.toggle("visible");
             }
-            else {
-                titleResults.classList.toggle("hidden");
-            }
         });
         const genreBtn = document.getElementById('genreBtn');
         genreBtn.addEventListener("click", function() {
@@ -150,9 +147,6 @@ $db = get_db();
             const genreResults = document.getElementById('searchGenreResults');
             if (genreBtn.clicked == true) {
                 genreResults.classList.toggle("visible");
-            }
-            else {
-                genreResults.classList.toggle("hidden");
             }
         });
     </script>
