@@ -76,7 +76,7 @@ $db = get_db();
             	try {
                     $searchName = "";
                     $name = $info = $genre = "";
-                    $searchName = $_POST['searchMovieName'];
+                    $searchName = strtolower($_POST['searchMovieName']);
                     $query1 = "SELECT titlename, titleinfo, genre FROM title WHERE '$searchName' = titlename";
                     $statement = $db->prepare($query1);
                     $statement->execute();
@@ -109,7 +109,7 @@ $db = get_db();
             <?php
             	try {
                     $name = $info = "";
-                    $genre = $_POST['genreSelect'];
+                    $genre = strtolower($_POST['genreSelect']);
                     $query2 = "SELECT * FROM title WHERE '$genre' = genre";
                     $statement = $db->prepare($query2);
                     $statement->execute();
