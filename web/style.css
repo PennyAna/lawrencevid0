@@ -142,7 +142,8 @@ li {
 
 }
 #searchTitleResults {
-
+    border: solid 5px var(--color-royal-light);
+    background-color: var(--color-orange-yellow);
 }
 #genreForm {
  
@@ -154,7 +155,7 @@ li {
 
 }
 #searchGenreResults {
-    
+
 }
 /*alpha.php*/
 #sendToEdit {
