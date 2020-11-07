@@ -30,7 +30,7 @@ $db = get_db();
             <!--holds search by movie name field/button-->
             <form class="form-group col-xs-12 col-6" id="searchForm"  method="POST" action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"]);?>">
                 <fieldset>
-                    <legend>Search</legend>
+                    <legend><h3>Search</h3></legend>
                     <label for="searchMovieName" class="sr-only"> Search Movie By Name</label>
                     <h5>Search Movie By Name</h5>
                     <input type="text" id="searchMovieName" name="searchMovieName" placeholder='Search Movie Name' onblur="checkTitleSearch()"></input>
@@ -38,8 +38,9 @@ $db = get_db();
                     <input type="submit" class="btn" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
             </form>   
+            
+            <div id="searchTitleResults" name="searchTitleResults" class="col-xs-12 col-6">
             <h3>Results of Title Search</h3>
-            <div id="searchResults" class="col-xs-12 col-6">
             <?php
             	try {
                     $searchName = "";
@@ -73,7 +74,7 @@ $db = get_db();
         <div class="row">
         <form class="form-group col-xs-12 col-6" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                     <fieldset>
-                        <legend>Genre</legend>
+                        <legend><h3>Genre</h3></legend>
                         <h5>Search By Genre</h5>
                         <select id="genreSelect" name="genreSelect">
                             <option name="genre0" value='genre0' selected>Choose Genre</option>
@@ -99,8 +100,9 @@ $db = get_db();
                         <input id="genreBtn" class="btn" type="submit" name="genreBtn" value="Sort By Genre"></input>
                     </fieldset>
             </form> 
+           
+            <div id="searchGenreResults" name="searchMovieResults" class="table-responsive"> 
             <h3>Results of Genre Search</h3>
-            <div class='table-responsive'> 
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
             	try {
