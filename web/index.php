@@ -39,7 +39,7 @@ $db = get_db();
                 </fieldset>
             </form>   
             
-            <div id="searchTitleResults" name="searchTitleResults" class="col-xs-12 col-6 hidden">
+            <div id="searchTitleResults" name="searchTitleResults" class="col-xs-12 col-6">
             <h3>Results of Title Search</h3>
             <?php
             	try {
@@ -101,7 +101,7 @@ $db = get_db();
                     </fieldset>
             </form> 
            
-            <div id="searchGenreResults" name="searchMovieResults" class="col-xs-12 col-6 table-responsive hidden"> 
+            <div id="searchGenreResults" name="searchMovieResults" class="col-xs-12 col-6 table-responsive"> 
             <h3>Results of Genre Search</h3>
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
