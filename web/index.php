@@ -104,7 +104,7 @@ $db = get_db();
         </div>
         <div class="row">
             <h3>Results of Genre Search</h3>
-            <ul id="genreList" class="col-xs-12 col-6 list-group">
+            <div class='table-responsive'> 
             <!--<need to put 'edit' buttons next to each populated titles-->
             <?php
             	try {
@@ -116,22 +116,22 @@ $db = get_db();
 					while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						 $name = $row['titlename'];
 						 $info = $row['titleinfo'];
-                         echo "<div class='table-responsive'> <table class='table'>";
-                         echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                         echo "<table class='table'>";
+                         echo "<thead><tr><th>Movie Title";
+                         echo "</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
                          echo "<tbody><tr><td>";
                          echo ucwords($name); 
                          echo "</td><td>";
                          echo ucfirst($info);
-                         echo "</td></tr></tbody></table></div>";
+                         echo "</td></tr></tbody></table>";
 				}
 				catch(PDOException $ex) {
 					echo "Error connecting to DB. Details: $ex";
 					die();
 				}
-			?>
-            </ul> <br><br>
+            ?>
+            </div>
 		</div>
     </div>
-    <!-- <script src="./lawVid.js"></script> -->
     </body>
 </html>
