@@ -134,24 +134,17 @@ $db = get_db();
     </div>
     <script>
         const titleBtn = document.getElementById('searchBtn');
-        titleBtn.addEventListener("click", makeTitleVisible);
-        const genreBtn = document.getElementById('genreBtn');
-        genreBtn.addEventListener("click", makeGenreVisible);
-   
-        function makeTitleVisible () {
-            console.log("BubblesTitleVis");
+        titleBtn.addEventListener("click",  function() {
             const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
-                console.log("BubblesTitleChange");
-                titleResults.classList.toggle("visible");
-        }
-        function makeGenreVisible () {
-            console.log("BubblesGenreVis");
+            titleResults.classList.toggle("visible");
+        });
+        const genreBtn = document.getElementById('genreBtn');
+        genreBtn.addEventListener("click", function() {
             const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults');
-                console.log("BubblesGenreChange");
-                genreResults.classList.toggle("visible");
-        }
+            genreResults.classList.toggle("visible");
+        });
     </script>
     </body>
 </html>
