@@ -116,7 +116,7 @@ $db = get_db();
 						 $info = $row['titleinfo'];
                          echo "<table class='table'>";
                          echo "<thead><tr><th>Movie Title";
-                         echo "</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                         echo "</th><th>Movie Description</th></tr></thead>";
                          echo "<tbody><tr><td>";
                          echo ucwords($name); 
                          echo "</td><td>";
