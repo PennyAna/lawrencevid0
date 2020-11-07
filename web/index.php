@@ -38,8 +38,6 @@ $db = get_db();
                     <input type="submit" class="btn" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
             </form>   
-        </div>
-        <div class="row">
             <form class="form-group col-xs-12 col-6" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                     <fieldset>
                         <legend>Genre</legend>
