@@ -132,7 +132,7 @@ $db = get_db();
             </div>
 		</div>
     </div>
-    <script>
+<!--     <script>
         const titleBtn = document.getElementById('searchBtn');
         titleBtn.addEventListener("click",  function() {
             const titleBtn = document.getElementById('searchBtn');
@@ -149,6 +149,6 @@ $db = get_db();
                 genreResults.classList.add("visible");
             }
         });
-    </script>
+    </script> -->
     </body>
 </html>
