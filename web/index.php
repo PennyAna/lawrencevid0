@@ -138,7 +138,7 @@ $db = get_db();
             const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
             if (titleBtn.clicked == true) {
-                titleResults.classList.toggle("visible");
+                titleResults.classList.add("visible");
             }
         });
         const genreBtn = document.getElementById('genreBtn');
@@ -146,7 +146,7 @@ $db = get_db();
             const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults');
             if (genreBtn.clicked == true) {
-                genreResults.classList.toggle("visible");
+                genreResults.classList.add("visible");
             }
         });
     </script>
