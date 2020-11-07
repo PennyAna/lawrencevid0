@@ -38,36 +38,6 @@ $db = get_db();
                     <input type="submit" class="btn" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
             </form>   
-            <form class="form-group col-xs-12 col-6" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-                    <fieldset>
-                        <legend>Genre</legend>
-                        <h5>Search By Genre</h5>
-                        <select id="genreSelect" name="genreSelect">
-                            <option name="genre0" value='genre0' selected>Choose Genre</option>
-                            <option name="horror" value='horror'>Horror</option>
-                            <option name="fantasy" value='fantasy'>Fantasy</option>
-                            <option name="action"
-                            value='action'>Action</option>
-                            <option name="adventure" value='adventure'>Adventure</option>
-                            <option name="comedy" value='comedy'>Comedy</option>
-                            <option name="drama" value='drama'>Drama</option>
-                            <option name="historical" value='historical'>Historical</option>
-                            <option name="mystery" value='mystery'>Mystery</option>
-                            <option name="documentary" value='documentary'>Documentary</option>
-                            <option name="romance" value='romance'>Romance</option>
-                            <option name="science fiction" value='science fiction'>Science Fiction</option>
-                            <option name="thriller" value='thriller'>Thriller</option>
-                            <option name="western" value='western'>Western</option>
-                            <option name="animation" value='animation'>Animation</option>
-                            <option name="kids" value='kids'>Kids</option>
-                            <option name="television" value='television'>Television</option>
-                            <option name="musical" value="musical">Musical</option>
-                        </select>
-                        <input id="genreBtn" class="btn" type="submit" name="genreBtn" value="Sort By Genre"></input>
-                    </fieldset>
-            </form> 
-        </div>
-        <div class="row">
             <h3>Results of Title Search</h3>
             <div id="searchResults" class="col-xs-12 col-6">
             <?php
@@ -101,6 +71,34 @@ $db = get_db();
             </div>
         </div>
         <div class="row">
+        <form class="form-group col-xs-12 col-6" id="genreForm"  method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                    <fieldset>
+                        <legend>Genre</legend>
+                        <h5>Search By Genre</h5>
+                        <select id="genreSelect" name="genreSelect">
+                            <option name="genre0" value='genre0' selected>Choose Genre</option>
+                            <option name="horror" value='horror'>Horror</option>
+                            <option name="fantasy" value='fantasy'>Fantasy</option>
+                            <option name="action"
+                            value='action'>Action</option>
+                            <option name="adventure" value='adventure'>Adventure</option>
+                            <option name="comedy" value='comedy'>Comedy</option>
+                            <option name="drama" value='drama'>Drama</option>
+                            <option name="historical" value='historical'>Historical</option>
+                            <option name="mystery" value='mystery'>Mystery</option>
+                            <option name="documentary" value='documentary'>Documentary</option>
+                            <option name="romance" value='romance'>Romance</option>
+                            <option name="science fiction" value='science fiction'>Science Fiction</option>
+                            <option name="thriller" value='thriller'>Thriller</option>
+                            <option name="western" value='western'>Western</option>
+                            <option name="animation" value='animation'>Animation</option>
+                            <option name="kids" value='kids'>Kids</option>
+                            <option name="television" value='television'>Television</option>
+                            <option name="musical" value="musical">Musical</option>
+                        </select>
+                        <input id="genreBtn" class="btn" type="submit" name="genreBtn" value="Sort By Genre"></input>
+                    </fieldset>
+            </form> 
             <h3>Results of Genre Search</h3>
             <div class='table-responsive'> 
             <!--<need to put 'edit' buttons next to each populated titles-->
