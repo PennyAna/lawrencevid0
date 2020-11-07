@@ -91,7 +91,6 @@ a:active {
 }
 .row {
     position: inherit;
-    /*border: 10px solid var(--color-royal-dark);*/
     margin: 20px;
     justify-content: center;
     align-items: center;
