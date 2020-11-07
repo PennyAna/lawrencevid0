@@ -41,7 +41,7 @@ $db = get_db();
                             $info = $row['titleinfo'];
                             $genre = $row['genre'];
                             echo "<div class='table-responsive'> <table class='table'>";
-                            echo "<thead><tr><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
+                            echo "<thead><tr><th>Edit?</th><th>Movie Title</th><th>Movie Description</th><th>Movie Genre</th></tr></thead>";
                             echo "<tbody><tr><td>";
                             echo "<input type='radio' id='$name' value='$name' name='namelist'></td><td>"; 
                             echo ucwords($name); 
