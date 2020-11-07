@@ -133,15 +133,28 @@ $db = get_db();
 		</div>
     </div>
     <script>
-        const titleResults = document.getElementById('searchTitleResults');
-        const genreResults = document.getElementById('searchGenreResults');
-        const titleBtn = document.getElementById('searchBtn');
+         const titleBtn = document.getElementById('searchBtn');
+         titleBtn.addEventListener("click", makeTitleVisible);
         const genreBtn = document.getElementById('genreBtn');
-        if (titleBtn.clicked == true) {
-            titleResults.classList.add("visible");
+        genreBtn.addEventListener("click", makeGenreVisible);
+   
+        function makeTitleVisible () {
+            const titleResults = document.getElementById('searchTitleResults');
+            if (titleBtn.clicked == true) {
+                titleResults.classList.add("visible");
+            }
+            else {
+                titleResults.classList.add("hidden");
+            }
         }
-        if (genreBtn.clicked == true) {
-            genreResults.classList.add("visible");
+        function makeGenreVisible () {
+            const genreResults = document.getElementById('searchGenreResults')
+            if (genreBtn.clicked == true) {
+                genreResults.classList.add("visible");
+            }
+            else {
+                genreResults.classList.add("hidden");
+            }
         }
     </script>
     </body>
