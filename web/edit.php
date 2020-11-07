@@ -30,19 +30,17 @@ $db = get_db();
     	</nav>
         <div class="container-fluid">
          <div class="row">
-            <form class="form-group col-9 changeMovieForm" id="editMovieForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <form class="form-group col-9 changeMovieForm" id="editMovieForm" name="editMovieForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 <fieldset>
                     <legend>Edit Movie Info</legend>
                     <label for="titleName1" class="sr-only">Movie Title: </label>
                     <h5>Add New Movie Name</h5>
-                    <input type="text" id="titleName1" required placeholder="Movie Title" value="<?php echo $_POST['namelist'];?>">
+                    <input type="text" id="titleName1" name="titleName1" required placeholder="Movie Title" value="<?php echo $_POST['namelist'];?>">
                     </input>
-                    <div id="titleNameError1" class="errorMsg"></div>
                     <label for="titleInfo1" class="sr-only" optional>Movie Description: </label>
                     <h5>Add New Movie Description</h5>
-                    <textarea rows="5" cols="20" id="titleInfo1" placeholder="Brief Movie Description">
+                    <textarea rows="5" cols="20" id="titleInfo1" name="titleInfo1" placeholder="Brief Movie Description">
                     </textarea>
-                    <div id="titleInfoError1" class="errorMsg"></div>
                     <label for="genreName1" class="sr-only">Movie Genre: </label>
                     <h5>Add New Movie Genre</h5>
                     <select id="genreName1" required>
@@ -65,8 +63,8 @@ $db = get_db();
                             <option name="kids" value='kids'>Kids</option>
                             <option name="television" value='television'>Television</option>
                     </select>
-                    <button type="submit" id="editBtn1">Update Movie Info</button>
-                    <button type="reset" id="resetBtn1">Reset Movie Info</button>
+                    <button type="submit" class="btn" id="editBtn1">Update Movie Info</button>
+                    <button type="reset" class="btn" id="resetBtn1">Reset Movie Info</button>
                 </fieldset>
             </form> <br><br>
             <div id="editResults" name="editResults">

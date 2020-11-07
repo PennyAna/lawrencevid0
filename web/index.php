@@ -36,7 +36,7 @@ echo "Bubbles Start";
                     <h5>Search Movie By Name</h5>
                     <input type="text" id="searchMovieName" name="searchMovieName" placeholder='Search Movie Name' onblur="checkTitleSearch()"></input>
                     <div id="searchTitleError" class="errorMsg" name="searchTitleError"></div>
-                    <input type="submit" id="searchBtn" name="searchBtn" value="Search Movies"></input>
+                    <input type="submit" class="btn" id="searchBtn" name="searchBtn" value="Search Movies"></input>
                 </fieldset>
             </form>   
         </div>
@@ -65,7 +65,7 @@ echo "Bubbles Start";
                             <option name="kids" value='kids'>Kids</option>
                             <option name="television" value='television'>Television</option>
                         </select>
-                        <input id="genreBtn" type="submit" name="genreBtn" value="Sort By Genre"></input>
+                        <input id="genreBtn" class="btn" type="submit" name="genreBtn" value="Sort By Genre"></input>
                     </fieldset>
             </form> 
         </div>

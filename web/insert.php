@@ -61,8 +61,8 @@ $db = get_db();
                             <option name="television" value='television'>Television</option>
                             <option name="musical" value="musical">Musical</option>
                         </select>
-                        <button type="submit" id="addBtn0" name="addBtn0">Add New Movie</button>
-                        <button type="reset" id="resetBtn0">Reset Movie Info</button>
+                        <button type="submit" class="btn" id="addBtn0" name="addBtn0">Add New Movie</button>
+                        <button type="reset" class="btn" id="resetBtn0">Reset Movie Info</button>
                     </fieldset> 
                 </form> 
                 <br><br>
@@ -75,7 +75,7 @@ $db = get_db();
                             $genre = strtolower($_POST['genreName0']);
                             $query5 = "INSERT INTO title (titlename, titleinfo, genre) VALUES ('$name', '$info', '$genre')";
                             if ($db->exec($query5)) {
-                                echo "<p> '$name' was updated successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
+                                echo "<p> '$name' was added successfully! </p> <ul class='list-group'> <li class='list-group-item'>";
                                 echo ucwords($name); 
                                 echo "</li><li class='list-group-item'>";
                                 echo ucfirst($info);

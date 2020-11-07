@@ -13,7 +13,7 @@
     --color-dark-cyan: #0F8B8D; /*dark cyan*/
     --color-gun-metal: #143642; /*gunmetal*/
 }
-/*index.php*/
+/*ALL*/
 html {
     position: relative;
     vertical-align: middle;
@@ -29,6 +29,7 @@ body {
     align-items: center;
     text-align: center;
 }
+/*ALL nav*/
 nav {
     justify-content: center;
     align-items: center;
@@ -61,6 +62,7 @@ nav {
     color: white;
     background-color: var(--color-dark-cyan);
 }
+/*end ALL nav*/
 .form-group {
     font-family: Arial, Helvetica, sans-serif;
     float: left;
@@ -89,7 +91,7 @@ a:active {
 }
 .row {
     position: inherit;
-    border: 10px solid var(--color-royal-dark);
+    /*border: 10px solid var(--color-royal-dark);*/
     margin: 20px;
     justify-content: center;
     align-items: center;
@@ -104,24 +106,32 @@ fieldset {
 legend {
 
 }
-.sr-only {
-    
-}
 h5 {
+
+}
+h3 {
 
 }
 label {
 
 }
-.col-3 {
-
+.btns {
+    color: white;
+    background-color: var(--color-dark-cyan);
+    font-family: Arial, Helvetica, sans-serif;
 }
-.col-6 {
 
+.list-group-item {
+    background-color: var(--color-royal-light);
+    color: var(--color-orange-yellow);
 }
-.col-9 {
-
-}
+li {
+    color: var(--color-gun-metal);
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}   
+/*index.php*/
 #searchForm {
 
 }
@@ -129,9 +139,6 @@ label {
     background-color: var(--color-spring-bud);
 }
 #searchBtn {
-
-}
-#searchTitleError {
 
 }
 #genreForm {
@@ -143,39 +150,9 @@ label {
 #genreBtn {
 
 }
-.btns {
-    color: white;
-    background-color: var(--color-dark-cyan);
-    font-family: Arial, Helvetica, sans-serif;
-}
-#showNewBtn {
-float: left;
-}
-#showAlpha {
-float: right;
-}
 /*alpha.php*/
-.alphaIndex {
+#sendToEdit {
 
-}
-#alpha0 {
-
-}
-#alpha1 {
-
-}
-#alpha2 {
-
-}
-li {
-    color: var(--color-gun-metal);
-    float: left;
-    padding: 10px;
-    margin: 10px;
-}   
-.list-group-item {
-    background-color: var(--color-royal-light);
-    color: var(--color-orange-yellow);
 }
 #alphaList {
 
@@ -188,30 +165,25 @@ li {
     background-color: var(--color-spring-bud);
     float: left;
 }
-#titleNameError0 {
-    float: left;
-}
 #titleInfo0 {
     background-color: var(--color-spring-bud);
-    float: left;
-}
-#titleInfoError0 {
     float: left;
 }
 #genreName0 {
     float: left;
     background-color: var(--color-spring-bud);
 }
-option {
-    align-self: center;
-} /*shared with edit.php*/
+
 #addBtn0 {
     float: left;
 }
 #resetBtn0 {
     float: left;
 }
-/*edit.php*/    
+#newMovieResults {
+
+}
+/*edit.php*/ 
 #editMovieForm {
 
 }
@@ -219,14 +191,8 @@ option {
     background-color: var(--color-spring-bud);
     float: left;
 }
-#titleNameError1 {
-    float: left;
-}
 #titleInfo1 {
     background-color: var(--color-spring-bud);
-    float: left;
-}
-#titleInfoError1 {
     float: left;
 }
 #genreName1 {
@@ -239,51 +205,37 @@ option {
 #resetBtn1 {
     float: left;
 }
-button {
-    color: white;
-    background-color: var(--color-dark-cyan);
-}
+
 /*shared by edit.php and insert.php*/
 .changeMovieForm {
     align-items: center;
 }
-/*
-.errorMsg {
-    background-color: #f99;
-    border: #900 1px solid;
-}*/
-/*search.php*/
-#searchResults {
 
-}
-/*genre.php*/
-#genreResults {
-}
 /*housekeeping for various screen sizes*/
 /* Extra small devices (phones, 600px and down) */
-    /* @media only screen and (max-width: 600px) {
+     @media only screen and (max-width: 600px) {
         [class*="col-"] {width: 100%;}
     }   
     /* Small devices (portrait tablets and large phones, 600px and up) */
-    /*@media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 600px) {
       /* For tablets: */
-        /*.col-s-1 {width: 8.33%;}
-          .col-s-2 {width: 16.66%;}
-          .col-s-3 {width: 25%;}
-          .col-s-4 {width: 33.33%;}
-          .col-s-5 {width: 41.66%;}
-          .col-s-6 {width: 50%;}
-          .col-s-7 {width: 58.33%;}
-          .col-s-8 {width: 66.66%;}
-          .col-s-9 {width: 75%;}
-          .col-s-10 {width: 83.33%;}
-          .col-s-11 {width: 91.66%;}
-          .col-s-12 {width: 100%;} 
+        .col-xs-1 {width: 8.33%;}
+          .col-xs-2 {width: 16.66%;}
+          .col-xs-3 {width: 25%;}
+          .col-xs-4 {width: 33.33%;}
+          .col-xs-5 {width: 41.66%;}
+          .col-xs-6 {width: 50%;}
+          .col-xs-7 {width: 58.33%;}
+          .col-xs-8 {width: 66.66%;}
+          .col-xs-9 {width: 75%;}
+          .col-xs-10 {width: 83.33%;}
+          .col-xs-11 {width: 91.66%;}
+          .col-xs-12 {width: 100%;} 
     }
     /* Medium devices (landscape tablets, 768px and up) */
-    /*@media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
      /* For desktop: */
-        /*.col-1 {width: 8.33%;}
+        .col-1 {width: 8.33%;}
           .col-2 {width: 16.66%;}
           .col-3 {width: 25%;}
           .col-4 {width: 33.33%;}
@@ -305,5 +257,5 @@ button {
     [class*="col-"] {
         float: middle;
         padding: 15px;
-    } */
+    } 
     
