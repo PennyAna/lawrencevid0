@@ -142,25 +142,15 @@ $db = get_db();
             console.log("BubblesTitleVis");
             const titleBtn = document.getElementById('searchBtn');
             const titleResults = document.getElementById('searchTitleResults');
-            if (titleBtn.clicked == true) {
                 console.log("BubblesTitleChange");
                 titleResults.classList.add("visible");
-            }
-            else {
-                titleResults.classList.add("hidden");
-            }
         }
         function makeGenreVisible () {
             console.log("BubblesGenreVis");
             const genreBtn = document.getElementById('genreBtn');
             const genreResults = document.getElementById('searchGenreResults')
-            if (genreBtn.clicked == true) {
                 console.log("BubblesGenreChange");
                 genreResults.classList.add("visible");
-            }
-            else {
-                genreResults.classList.add("hidden");
-            }
         }
     </script>
     </body>
